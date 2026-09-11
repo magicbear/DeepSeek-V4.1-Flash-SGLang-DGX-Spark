@@ -1,0 +1,221 @@
+[
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "ceiling_count",
+    "repeat": 0,
+    "started_perf_s": 506009.141806409,
+    "started_at": "2026-09-11T10:00:15.260531",
+    "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+    "usage": {
+      "prompt_tokens": 18,
+      "total_tokens": 257,
+      "completion_tokens": 239,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.15961832599714398,
+    "decode_elapsed_s": 2.5876392379868776,
+    "decode_tps": 91.97572695070059,
+    "e2e_s": 2.747350914985873,
+    "e2e_output_tps": 86.99289147823657,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "count_correct": true,
+    "artifact": "local-archive/ceiling_count-0.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "coding",
+    "repeat": 0,
+    "started_perf_s": 506011.892357195,
+    "started_at": "2026-09-11T10:00:18.011083",
+    "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start time.\"\"\"\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for start, end in sorted_intervals[1:]:\n        last_start, last_end = merged[-1]\n        if start <= last_end:\n            merged[-1] = (last_start, max(last_end, end))\n        else:\n            merged.append((start, end))\n    \n    return merged\n\n\n# Example calls\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7",
+    "usage": {
+      "prompt_tokens": 36,
+      "total_tokens": 236,
+      "completion_tokens": 200,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.2621752969571389,
+    "decode_elapsed_s": 2.6112766480073333,
+    "decode_tps": 76.20793459469606,
+    "e2e_s": 2.8735079859616235,
+    "e2e_output_tps": 69.6013377993344,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "artifact": "local-archive/coding-0.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "prose",
+    "repeat": 0,
+    "started_perf_s": 506014.781805639,
+    "started_at": "2026-09-11T10:00:20.900532",
+    "text": "A refrigerator works by moving heat from the inside to the outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That's why the inside gets cold. Then a compressor squeezes the refrigerant, making it hot, and pushes it through coils on the back or bottom. There, the heat escapes into your kitchen. The refrigerant cools down, turns back into liquid, and the cycle repeats. So a fridge doesn't \"make cold\"—it removes heat. That's also why the back feels warm!",
+    "usage": {
+      "prompt_tokens": 25,
+      "total_tokens": 151,
+      "completion_tokens": 126,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.21944244799669832,
+    "decode_elapsed_s": 4.247192374023143,
+    "decode_tps": 29.431207487687693,
+    "e2e_s": 4.4666906030033715,
+    "e2e_output_tps": 28.20880405624658,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "artifact": "local-archive/prose-0.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "ceiling_count",
+    "repeat": 1,
+    "started_perf_s": 506019.265645307,
+    "started_at": "2026-09-11T10:00:25.384371",
+    "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+    "usage": {
+      "prompt_tokens": 18,
+      "total_tokens": 257,
+      "completion_tokens": 239,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.19214432500302792,
+    "decode_elapsed_s": 2.5880490010022186,
+    "decode_tps": 91.96116453275607,
+    "e2e_s": 2.780254396959208,
+    "e2e_output_tps": 85.96335654082472,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "count_correct": true,
+    "artifact": "local-archive/ceiling_count-1.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "coding",
+    "repeat": 1,
+    "started_perf_s": 506022.06162758,
+    "started_at": "2026-09-11T10:00:28.180354",
+    "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start time.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\n# Example calls\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]",
+    "usage": {
+      "prompt_tokens": 36,
+      "total_tokens": 236,
+      "completion_tokens": 200,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.25342966796597466,
+    "decode_elapsed_s": 2.786544139031321,
+    "decode_tps": 71.4146233008094,
+    "e2e_s": 3.0400379179627635,
+    "e2e_output_tps": 65.78865310141495,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "artifact": "local-archive/coding-1.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "prose",
+    "repeat": 1,
+    "started_perf_s": 506025.105544874,
+    "started_at": "2026-09-11T10:00:31.224271",
+    "text": "A refrigerator works by moving heat from the inside to the outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes this gas, making it hot. That heat escapes through coils on the back or bottom of the fridge. As the refrigerant cools down, it turns back into a liquid and cycles through again. This loop keeps repeating, so heat keeps leaving the fridge. Since heat is constantly removed, the food inside stays cold and fresh!",
+    "usage": {
+      "prompt_tokens": 25,
+      "total_tokens": 140,
+      "completion_tokens": 115,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.23746998101705685,
+    "decode_elapsed_s": 3.5717712810146622,
+    "decode_tps": 31.91693729269672,
+    "e2e_s": 3.809305093018338,
+    "e2e_output_tps": 30.189233256945215,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "artifact": "local-archive/prose-1.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "ceiling_count",
+    "repeat": 2,
+    "started_perf_s": 506028.931749321,
+    "started_at": "2026-09-11T10:00:35.050476",
+    "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+    "usage": {
+      "prompt_tokens": 18,
+      "total_tokens": 257,
+      "completion_tokens": 239,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.19763260101899505,
+    "decode_elapsed_s": 2.5651860979851335,
+    "decode_tps": 92.78079285824171,
+    "e2e_s": 2.762871348997578,
+    "e2e_output_tps": 86.50420877784039,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "count_correct": true,
+    "artifact": "local-archive/ceiling_count-2.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "coding",
+    "repeat": 2,
+    "started_perf_s": 506031.710736919,
+    "started_at": "2026-09-11T10:00:37.829463",
+    "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start time.\"\"\"\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for start, end in sorted_intervals[1:]:\n        last_start, last_end = merged[-1]\n        if start <= last_end:\n            merged[-1] = (last_start, max(last_end, end))\n        else:\n            merged.append((start, end))\n    \n    return merged\n\n\n# Example calls\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7",
+    "usage": {
+      "prompt_tokens": 36,
+      "total_tokens": 236,
+      "completion_tokens": 200,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.2511665729689412,
+    "decode_elapsed_s": 2.634321033023298,
+    "decode_tps": 75.54128654229216,
+    "e2e_s": 2.8855465069646016,
+    "e2e_output_tps": 69.31096051208212,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "artifact": "local-archive/coding-2.json"
+  },
+  {
+    "url": "http://spark01:8008",
+    "label": "vllm-repo-spark4",
+    "category": "prose",
+    "repeat": 2,
+    "started_perf_s": 506034.612719127,
+    "started_at": "2026-09-11T10:00:40.731445",
+    "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. The hot gas travels through coils on the back or bottom, where it releases heat into your kitchen and turns back into a liquid. Finally, it flows back inside to soak up more heat. This cycle repeats over and over, keeping the inside cold so your food stays fresh.",
+    "usage": {
+      "prompt_tokens": 25,
+      "total_tokens": 136,
+      "completion_tokens": 111,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "ttft_s": 0.22316331299953163,
+    "decode_elapsed_s": 3.572794440027792,
+    "decode_tps": 30.788225252372577,
+    "e2e_s": 3.796015403000638,
+    "e2e_output_tps": 29.24118798681844,
+    "metric_note": "Usage token count; subtract one first token as in reference chat benchmark. SSE events preserved; chunk count is never token count.",
+    "artifact": "local-archive/prose-2.json"
+  }
+]

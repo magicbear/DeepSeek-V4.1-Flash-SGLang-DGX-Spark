@@ -1,0 +1,19 @@
+{
+  "name": "vllm-dsv41-repo-20260911",
+  "image": "vllm-dsv41:overlay5",
+  "image_id": "sha256:10cd74096eb272a2d9f1ba36e232d891d9c772399f8d63c9f00e52ba5af189a0",
+  "hosts": [
+    "spark01",
+    "spark02",
+    "spark03",
+    "spark04"
+  ],
+  "data_ips": [
+    "spark01-data",
+    "spark02-data",
+    "spark03-data",
+    "spark04-data"
+  ],
+  "api": "http://spark01:8008",
+  "reference": "tonyd2wild/DeepSeek-V4.1-Flash-vLLM-DGX-Spark@ca662ac35193c69ace9cee37f13a94abf2eff0fc"
+}

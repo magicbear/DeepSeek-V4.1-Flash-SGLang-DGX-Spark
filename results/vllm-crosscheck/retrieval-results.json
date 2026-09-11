@@ -1,0 +1,44 @@
+[
+  {
+    "ttft_s": 1.5298585699638352,
+    "total_s": 1.684477852017153,
+    "completion_tokens": 6,
+    "prompt_tokens": 1502,
+    "decode_tok_s": 32.35749994131344,
+    "chars": 11,
+    "finish_elapsed_s": 1.6843822509981692,
+    "text": "RAVEN-77193",
+    "raw_file": "local-archive/4f00267e4d454c78a883e860034986a3.json",
+    "target": 1000,
+    "expected": "RAVEN-77193",
+    "passed": true
+  },
+  {
+    "ttft_s": 1.9832601959933527,
+    "total_s": 2.1431764640146866,
+    "completion_tokens": 6,
+    "prompt_tokens": 2922,
+    "decode_tok_s": 31.279874822974314,
+    "chars": 11,
+    "finish_elapsed_s": 2.1431073829880916,
+    "text": "RAVEN-84193",
+    "raw_file": "local-archive/27dc26f8ff4d4b5ea14d5f6332b54166.json",
+    "target": 2000,
+    "expected": "RAVEN-84193",
+    "passed": true
+  },
+  {
+    "ttft_s": 4.456821106025018,
+    "total_s": 4.626685109979007,
+    "completion_tokens": 6,
+    "prompt_tokens": 5914,
+    "decode_tok_s": 29.446811086788912,
+    "chars": 11,
+    "finish_elapsed_s": 4.62661877903156,
+    "text": "RAVEN-98193",
+    "raw_file": "local-archive/e5b516d94d124c2c9b2fda5efce97a77.json",
+    "target": 4000,
+    "expected": "RAVEN-98193",
+    "passed": true
+  }
+]

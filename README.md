@@ -100,7 +100,11 @@ Each cell is delivered completion tokens per second across all active streams. C
 
 The publication-ready comparison, including charts and the broader experiment history, is available as [HTML](results/DGX-Spark-DeepSeek-V4.1-Flash-Spark-4-8机性能报告-20260910.html) and [PDF](results/DGX-Spark-DeepSeek-V4.1-Flash-Spark-4-8机性能报告-20260910.pdf).
 
-## 6. Repository layout
+## 6. Four-node vLLM cross-check
+
+The referenced vLLM deployment was also reproduced locally on four Spark nodes. Its three-run median C1 decode was **91.98 tok/s** for counting, **75.54 tok/s** for code, and **30.79 tok/s** for prose. Its C8 aggregate decode was 341.26, 237.45, and 95.55 tok/s, and effective prefill reached 1,502.7–1,664.4 tok/s for the measured 2,950/5,853-token inputs. The 18 functional/length checks, three cold retrieval checks, and all 108 matrix requests passed. See [`docs/VLLM-CROSSCHECK-20260911.md`](docs/VLLM-CROSSCHECK-20260911.md) and [`results/vllm-crosscheck/`](results/vllm-crosscheck/).
+
+## 7. Repository layout
 
 | Path | Contents |
 |---|---|
@@ -112,6 +116,6 @@ The publication-ready comparison, including charts and the broader experiment hi
 | `docs/` | Runbook, findings, migration notes and third-party notices |
 | `results/` | Self-contained report, summaries and raw request receipts |
 
-## 7. Credits and license
+## 8. Credits and license
 
 The local Engram adapter began from [0xSero/deepseek-v4.1-flash-4x-rtx-pro-6000](https://github.com/0xSero/deepseek-v4.1-flash-4x-rtx-pro-6000). The prompt set and parts of the benchmark/reporting workflow are adapted from [tonyd2wild/DeepSeek-V4.1-Flash-vLLM-DGX-Spark](https://github.com/tonyd2wild/DeepSeek-V4.1-Flash-vLLM-DGX-Spark), fixed at commit `ca662ac35193c69ace9cee37f13a94abf2eff0fc`. SGLang-derived runtime code remains under Apache-2.0; deployment and adapter changes are provided under [`LICENSE`](LICENSE). Model weights and container images are not redistributed.
