@@ -1,0 +1,15 @@
+FROM lmsysorg/sglang:dev-v4f-2dgx-v2
+
+# Build context must contain the ARM64 FlashInfer 0.7.0rc1 Python package
+# copied from a compatible image.  No model weights or container image layers
+# are included in this repository.
+RUN rm -rf /opt/sglang/lib/python3.12/site-packages/flashinfer \
+    /opt/sglang/lib/python3.12/site-packages/flashinfer_python-*.dist-info \
+    /opt/sglang/lib/python3.12/site-packages/flashinfer_cubin \
+    /opt/sglang/lib/python3.12/site-packages/flashinfer_cubin-*.dist-info \
+    /opt/sglang/lib/python3.12/site-packages/flashinfer_jit_cache \
+    /opt/sglang/lib/python3.12/site-packages/flashinfer_jit_cache-*.dist-info
+
+COPY flashinfer /opt/sglang/lib/python3.12/site-packages/flashinfer
+COPY flashinfer_python-0.7.0rc1.dist-info \
+    /opt/sglang/lib/python3.12/site-packages/flashinfer_python-0.7.0rc1.dist-info

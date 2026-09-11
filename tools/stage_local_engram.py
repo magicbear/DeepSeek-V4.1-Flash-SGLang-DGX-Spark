@@ -19,7 +19,8 @@ for layer in [1,14]:
     with (source/idx[name]).open('rb') as f:
         n=struct.unpack('<Q',f.read(8))[0]; counts[layer]=json.loads(f.read(n))[name]['shape'][0]
 code=(here/'stage_engram_rows.py').read_text()
-run=here/'recovery'/('local-engram-tp'+str(tp)+'-'+datetime.now().strftime('%Y%m%d-%H%M%S')); run.mkdir()
+run=here/'recovery'/('local-engram-tp'+str(tp)+'-'+datetime.now().strftime('%Y%m%d-%H%M%S'))
+run.mkdir(parents=True)
 def one(pair):
     rank,host=pair; dst=f'/data/dsv41-engram-local/tp{tp}-rank{rank}'
     specs=[f'{l}:{n*rank//tp}:{n*(rank+1)//tp}' for l,n in counts.items()]

@@ -34,14 +34,18 @@ def probe(host):
 
 
 def command(size, rank, dspark=False, name=None, force_copy=False, graphs=False,
-            concurrency=1, local_engram=False, mla_backend=None):
+            concurrency=1, local_engram=False, mla_backend=None,
+            flashinfer_autotune=False, chunked_prefill_size=1024):
     tokens = shlex.split(base.command(size, rank, 8100 + size))
     tokens[tokens.index('--name') + 1] = name or f'dsv41-spark{size}-eager-20260911'
     inner = tokens[-1]
     inner = inner.replace('--mem-fraction-static ' + ('0.70' if size == 4 else '0.82'),
                           '--mem-fraction-static 0.85 --max-total-tokens 8192')
     inner = inner.replace('--context-length 409600', '--context-length 8192')
-    inner = inner.replace('--chunked-prefill-size 2048', '--chunked-prefill-size 1024')
+    inner = inner.replace(
+        '--chunked-prefill-size 2048',
+        f'--chunked-prefill-size {chunked_prefill_size}',
+    )
     inner = inner.replace('--max-running-requests 4 --cuda-graph-max-bs-decode 4',
                           '--max-running-requests 1 --cuda-graph-backend-decode disabled '
                           '--cuda-graph-backend-prefill disabled --disable-flashinfer-autotune --skip-server-warmup')
@@ -52,6 +56,8 @@ def command(size, rank, dspark=False, name=None, force_copy=False, graphs=False,
         graph_bs = ' '.join(str(x) for x in range(1, concurrency + 1))
         inner = inner.replace('--cuda-graph-backend-decode disabled',
                               '--cuda-graph-backend-decode full --cuda-graph-bs-decode ' + graph_bs)
+    if flashinfer_autotune:
+        inner = inner.replace(' --disable-flashinfer-autotune', '')
     # Bound the lifetime of CPU weight views. Queuing every expert copy holds
     # many mmap-backed shards while GB10 already owns most physical RAM.
     inner = inner.replace('--load-format safetensors',
@@ -101,6 +107,9 @@ def main():
     p.add_argument('--concurrency', type=int, choices=range(1,9), default=1)
     p.add_argument('--local-engram', action='store_true')
     p.add_argument('--mla-backend', choices=['flashinfer','triton','torch','hybrid'])
+    p.add_argument('--flashinfer-autotune', action='store_true')
+    p.add_argument('--chunked-prefill-size', type=int, choices=[1024, 2048, 4096, 8192], default=1024)
+    p.add_argument('--image', help='Override the base image for an isolated comparison')
     p.add_argument('--adapter', help='Shared adapter source directory')
     p.add_argument('--hosts', nargs='+', help='Explicit management addresses, rank order')
     p.add_argument('--master', help='Rendezvous address reachable by all ranks')
@@ -110,6 +119,8 @@ def main():
     args = p.parse_args()
     if args.adapter:
         base.ADAPTER = args.adapter
+    if args.image:
+        base.IMAGE = args.image
     if args.hosts:
         if len(args.hosts) != args.size or len(set(args.hosts)) != args.size:
             p.error('--hosts must contain exactly --size distinct hosts')
@@ -122,7 +133,9 @@ def main():
     run.mkdir(parents=True)
     hosts = base.HOSTS[:args.size]
     cmds = {host: command(args.size, rank, args.dspark, args.name, args.force_copy,
-                          args.graphs,args.concurrency,args.local_engram,args.mla_backend) for rank, host in enumerate(hosts)}
+                          args.graphs,args.concurrency,args.local_engram,args.mla_backend,
+                          args.flashinfer_autotune,args.chunked_prefill_size)
+            for rank, host in enumerate(hosts)}
     (run / 'config.json').write_text(json.dumps(vars(args), indent=2))
     for rank, host in enumerate(hosts):
         (run / f'rank{rank}.sh').write_text(cmds[host] + '\n')

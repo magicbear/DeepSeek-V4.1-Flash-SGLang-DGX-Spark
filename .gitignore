@@ -2,3 +2,4 @@ __pycache__/
 *.py[cod]
 results/live/*
 !results/live/.gitkeep
+tools/recovery/

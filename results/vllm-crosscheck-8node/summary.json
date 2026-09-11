@@ -1,0 +1,356 @@
+{
+  "label": "vllm-repo-spark8-065",
+  "date": "2026-09-11",
+  "reference": "tonyd2wild/DeepSeek-V4.1-Flash-vLLM-DGX-Spark@ca662ac35193c69ace9cee37f13a94abf2eff0fc",
+  "environment": {
+    "nodes": 8,
+    "parallelism": "TP8/EP8/PP1",
+    "vllm": "0.1.dev20904+g179dd0fa9",
+    "flashinfer": "0.7.0rc1",
+    "pytorch": "2.13.0+cu130",
+    "speculation": "DSpark block 5",
+    "max_model_length": 300000,
+    "max_sequences": 8,
+    "max_batched_tokens": 8192,
+    "gpu_memory_utilization": 0.65,
+    "container_memory_gib": 112,
+    "engram": "verified rank-local sparse copies",
+    "interconnect": "200 GbE RoCE"
+  },
+  "validation": {
+    "functional_and_length": {
+      "checks": 18,
+      "passed": 18
+    },
+    "unique_prefix_retrieval": {
+      "checks": 3,
+      "passed": 3,
+      "prompt_tokens": [
+        1502,
+        2922,
+        5914
+      ]
+    },
+    "matrix_requests": 108,
+    "matrix_valid": true,
+    "containers_running": 8,
+    "containers_oom_killed": 0
+  },
+  "c1_repeat3": {
+    "ceiling_count": {
+      "decode_tps": [
+        108.0295,
+        109.0913,
+        94.8936
+      ],
+      "median_decode_tps": 108.0295,
+      "median_ttft_s": 0.1811,
+      "median_e2e_output_tps": 101.1484
+    },
+    "coding": {
+      "decode_tps": [
+        84.7556,
+        83.2444,
+        83.0032
+      ],
+      "median_decode_tps": 83.2444,
+      "median_ttft_s": 0.2273,
+      "median_e2e_output_tps": 76.3982
+    },
+    "prose": {
+      "decode_tps": [
+        41.9655,
+        37.3778,
+        37.5269
+      ],
+      "median_decode_tps": 37.5269,
+      "median_ttft_s": 0.152,
+      "median_e2e_output_tps": 36.0166
+    }
+  },
+  "matrix_headline": [
+    {
+      "level": "C1",
+      "agg_tok_s": 54.02,
+      "per_stream_tok_s": 57.99,
+      "ttft_mean_s": 0.22
+    },
+    {
+      "level": "C2",
+      "agg_tok_s": 96.34,
+      "per_stream_tok_s": 54.34,
+      "ttft_mean_s": 0.291
+    },
+    {
+      "level": "C3",
+      "agg_tok_s": 128.52,
+      "per_stream_tok_s": 47.17,
+      "ttft_mean_s": 0.306
+    },
+    {
+      "level": "C4",
+      "agg_tok_s": 141.27,
+      "per_stream_tok_s": 39.62,
+      "ttft_mean_s": 0.39
+    },
+    {
+      "level": "C5",
+      "agg_tok_s": 155.41,
+      "per_stream_tok_s": 34.64,
+      "ttft_mean_s": 0.36
+    },
+    {
+      "level": "C6",
+      "agg_tok_s": 173.59,
+      "per_stream_tok_s": 31.77,
+      "ttft_mean_s": 0.391
+    },
+    {
+      "level": "C7",
+      "agg_tok_s": 188.59,
+      "per_stream_tok_s": 29.87,
+      "ttft_mean_s": 0.407
+    },
+    {
+      "level": "C8",
+      "agg_tok_s": 188.65,
+      "per_stream_tok_s": 26.49,
+      "ttft_mean_s": 0.479
+    }
+  ],
+  "matrix_categories": [
+    {
+      "c": 1,
+      "category": "coding",
+      "wall_s": 2.754,
+      "tokens": 200,
+      "agg_tok_s": 72.62,
+      "per_stream_tok_s": 78.41,
+      "ttft_mean_s": 0.214
+    },
+    {
+      "c": 1,
+      "category": "prose",
+      "wall_s": 3.502,
+      "tokens": 124,
+      "agg_tok_s": 35.41,
+      "per_stream_tok_s": 37.57,
+      "ttft_mean_s": 0.225
+    },
+    {
+      "c": 1,
+      "category": "ceiling_count",
+      "wall_s": 2.581,
+      "tokens": 239,
+      "agg_tok_s": 92.61,
+      "per_stream_tok_s": 100.37,
+      "ttft_mean_s": 0.207
+    },
+    {
+      "c": 2,
+      "category": "coding",
+      "wall_s": 2.914,
+      "tokens": 400,
+      "agg_tok_s": 137.29,
+      "per_stream_tok_s": 76.85,
+      "ttft_mean_s": 0.321
+    },
+    {
+      "c": 2,
+      "category": "prose",
+      "wall_s": 4.405,
+      "tokens": 244,
+      "agg_tok_s": 55.39,
+      "per_stream_tok_s": 31.83,
+      "ttft_mean_s": 0.262
+    },
+    {
+      "c": 2,
+      "category": "ceiling_count",
+      "wall_s": 2.821,
+      "tokens": 478,
+      "agg_tok_s": 169.46,
+      "per_stream_tok_s": 91.96,
+      "ttft_mean_s": 0.23
+    },
+    {
+      "c": 3,
+      "category": "coding",
+      "wall_s": 3.331,
+      "tokens": 600,
+      "agg_tok_s": 180.14,
+      "per_stream_tok_s": 66.65,
+      "ttft_mean_s": 0.341
+    },
+    {
+      "c": 3,
+      "category": "prose",
+      "wall_s": 4.798,
+      "tokens": 369,
+      "agg_tok_s": 76.9,
+      "per_stream_tok_s": 27.69,
+      "ttft_mean_s": 0.271
+    },
+    {
+      "c": 3,
+      "category": "ceiling_count",
+      "wall_s": 3.336,
+      "tokens": 717,
+      "agg_tok_s": 214.92,
+      "per_stream_tok_s": 78.67,
+      "ttft_mean_s": 0.271
+    },
+    {
+      "c": 4,
+      "category": "coding",
+      "wall_s": 3.924,
+      "tokens": 800,
+      "agg_tok_s": 203.89,
+      "per_stream_tok_s": 57.1,
+      "ttft_mean_s": 0.367
+    },
+    {
+      "c": 4,
+      "category": "prose",
+      "wall_s": 6.026,
+      "tokens": 474,
+      "agg_tok_s": 78.66,
+      "per_stream_tok_s": 22.13,
+      "ttft_mean_s": 0.413
+    },
+    {
+      "c": 4,
+      "category": "ceiling_count",
+      "wall_s": 3.598,
+      "tokens": 956,
+      "agg_tok_s": 265.67,
+      "per_stream_tok_s": 73.24,
+      "ttft_mean_s": 0.253
+    },
+    {
+      "c": 5,
+      "category": "coding",
+      "wall_s": 4.528,
+      "tokens": 1000,
+      "agg_tok_s": 220.85,
+      "per_stream_tok_s": 49.45,
+      "ttft_mean_s": 0.365
+    },
+    {
+      "c": 5,
+      "category": "prose",
+      "wall_s": 6.97,
+      "tokens": 627,
+      "agg_tok_s": 89.96,
+      "per_stream_tok_s": 19.82,
+      "ttft_mean_s": 0.356
+    },
+    {
+      "c": 5,
+      "category": "ceiling_count",
+      "wall_s": 4.083,
+      "tokens": 1195,
+      "agg_tok_s": 292.68,
+      "per_stream_tok_s": 64.67,
+      "ttft_mean_s": 0.294
+    },
+    {
+      "c": 6,
+      "category": "coding",
+      "wall_s": 4.724,
+      "tokens": 1200,
+      "agg_tok_s": 254.04,
+      "per_stream_tok_s": 46.65,
+      "ttft_mean_s": 0.409
+    },
+    {
+      "c": 6,
+      "category": "prose",
+      "wall_s": 8.02,
+      "tokens": 747,
+      "agg_tok_s": 93.15,
+      "per_stream_tok_s": 16.88,
+      "ttft_mean_s": 0.373
+    },
+    {
+      "c": 6,
+      "category": "ceiling_count",
+      "wall_s": 4.453,
+      "tokens": 1434,
+      "agg_tok_s": 322.05,
+      "per_stream_tok_s": 59.43,
+      "ttft_mean_s": 0.331
+    },
+    {
+      "c": 7,
+      "category": "coding",
+      "wall_s": 5.199,
+      "tokens": 1400,
+      "agg_tok_s": 269.29,
+      "per_stream_tok_s": 42.76,
+      "ttft_mean_s": 0.41
+    },
+    {
+      "c": 7,
+      "category": "prose",
+      "wall_s": 7.887,
+      "tokens": 851,
+      "agg_tok_s": 107.89,
+      "per_stream_tok_s": 16.98,
+      "ttft_mean_s": 0.405
+    },
+    {
+      "c": 7,
+      "category": "ceiling_count",
+      "wall_s": 4.782,
+      "tokens": 1673,
+      "agg_tok_s": 349.85,
+      "per_stream_tok_s": 54.97,
+      "ttft_mean_s": 0.323
+    },
+    {
+      "c": 8,
+      "category": "coding",
+      "wall_s": 5.841,
+      "tokens": 1600,
+      "agg_tok_s": 273.91,
+      "per_stream_tok_s": 38.39,
+      "ttft_mean_s": 0.454
+    },
+    {
+      "c": 8,
+      "category": "prose",
+      "wall_s": 9.596,
+      "tokens": 992,
+      "agg_tok_s": 103.38,
+      "per_stream_tok_s": 14.59,
+      "ttft_mean_s": 0.503
+    },
+    {
+      "c": 8,
+      "category": "ceiling_count",
+      "wall_s": 5.247,
+      "tokens": 1912,
+      "agg_tok_s": 364.37,
+      "per_stream_tok_s": 49.83,
+      "ttft_mean_s": 0.365
+    }
+  ],
+  "prefill": [
+    {
+      "target": 2000,
+      "prompt_tokens": 2950,
+      "ttft_s": 2.018,
+      "prefill_tok_s": 1461.6,
+      "metric_note": "Effective prompt tokens / client TTFT; includes scheduler, network and first-token overhead."
+    },
+    {
+      "target": 4000,
+      "prompt_tokens": 5853,
+      "ttft_s": 3.473,
+      "prefill_tok_s": 1685.3,
+      "metric_note": "Effective prompt tokens / client TTFT; includes scheduler, network and first-token overhead."
+    }
+  ],
+  "startup_note": "gpu_memory_utilization=0.80 allocated about 39 GiB KV per node and triggered driver NV_ERR_NO_MEMORY during autotune; 0.65 completed and retains ample capacity for C1-C8."
+}

@@ -23,6 +23,18 @@ The eight-node deployment improved median C1 decode by 4.4%–15.7% over four no
 
 The count prompt is a useful decode ceiling, not a general quality score. A separate six-run eight-node count test produced 69.64, 86.15, 85.34, 85.99, 84.80, and 85.47 tok/s, with a median of **85.40 tok/s**. All six outputs counted 1–80 correctly. The first run shows material run-to-run variation, so the main comparison above uses the fixed three-repeat protocol.
 
+### FlashInfer 0.7 optimization follow-up
+
+A four-node follow-up replaced FlashInfer 0.6.18 with 0.7.0rc1 and routed the
+short decode path directly to its DSV4 split-K kernel while retaining Triton
+for large prefill batches.  The final C1 medians were **77.66 tok/s** for count,
+**58.17 tok/s** for code and **16.86 tok/s** for prose.  Warmed effective
+prefill improved to **347.6/351.2 tok/s** at 2,950/5,853 prompt tokens.  The
+prose result varies with DSpark acceptance and is therefore reported alongside,
+rather than attributed to, the attention kernel.  See
+[`docs/FLASHINFER-070-OPTIMIZATION-20260911.md`](docs/FLASHINFER-070-OPTIMIZATION-20260911.md)
+for the patch, rejected chunk-size test and full interpretation.
+
 ## 2. What differs from the stock image
 
 The measured service started from `lmsysorg/sglang:dev-v4f-2dgx-v2`, image ID `sha256:67873eb93b994736ab534111f79b5aa93d2575b973ebf9d276c40d548ff9afec`, reporting SGLang `0.0.0.dev1+g452239a74` and PyTorch `2.13.0+cu130`. The launcher overlays the V4.1 Python implementation plus the SM121 JIT source/header set at container start.
@@ -30,11 +42,16 @@ The measured service started from `lmsysorg/sglang:dev-v4f-2dgx-v2`, image ID `s
 The Spark adaptation adds four behavior changes:
 
 1. [`patch/engram_backend.py`](patch/engram_backend.py) locates ARM64 CUDA runtime libraries and accepts only locally staged Engram shards whose model-index hash, safetensors header, and rank range validate against the checkpoint.
-2. [`patch/sitecustomize.py`](patch/sitecustomize.py) keeps FlashInfer for short decode queries and routes the longer prefill path through the SM120 Triton sparse-MLA implementation. An explicitly armed diagnostic can compare both outputs; it is disabled during timing.
+2. [`patch/sitecustomize.py`](patch/sitecustomize.py) keeps FlashInfer for short decode queries and routes the longer prefill path through the SM120 Triton sparse-MLA implementation. The FlashInfer 0.7 follow-up additionally overlays [`patches/flash_mla_sm120.py`](patches/flash_mla_sm120.py) to call the DSV4 decode kernel directly. An explicitly armed diagnostic can compare both outputs; it is disabled during timing.
 3. [`launch/recover_eager.py`](launch/recover_eager.py) forces sequential bounded-memory weight loading and clones CPU expert views before H2D. This avoids GB10 unified-memory loader deaths seen with the stock asynchronous path.
 4. The final launch uses DSpark block 5, decode graphs for batch sizes 1–8, local Engram storage, `max-total-tokens=8192`, and an 8,192-token context limit.
 
-The Docker image itself was not rebuilt for the measurement. The Python/JIT/adapter trees were mounted from shared storage and copied into the container before `sglang.launch_server`. See [`build/README.md`](build/README.md) for the required tree layout and [`docs/RUNBOOK-SGLANG-SPARK.md`](docs/RUNBOOK-SGLANG-SPARK.md) for the measured launch procedure.
+The original measurement did not rebuild the Docker image. The FlashInfer 0.7
+follow-up uses [`build/Dockerfile.flashinfer070`](build/Dockerfile.flashinfer070)
+with an ARM64 package extracted from a compatible local image.  See
+[`build/README.md`](build/README.md) for the required tree layout and
+[`docs/RUNBOOK-SGLANG-SPARK.md`](docs/RUNBOOK-SGLANG-SPARK.md) for the measured
+launch procedure.
 
 ## 3. Launch
 
@@ -100,9 +117,18 @@ Each cell is delivered completion tokens per second across all active streams. C
 
 The publication-ready comparison, including charts and the broader experiment history, is available as [HTML](results/DGX-Spark-DeepSeek-V4.1-Flash-Spark-4-8机性能报告-20260910.html) and [PDF](results/DGX-Spark-DeepSeek-V4.1-Flash-Spark-4-8机性能报告-20260910.pdf).
 
-## 6. Four-node vLLM cross-check
+## 6. Four- and eight-node vLLM cross-check
 
 The referenced vLLM deployment was also reproduced locally on four Spark nodes. Its three-run median C1 decode was **91.98 tok/s** for counting, **75.54 tok/s** for code, and **30.79 tok/s** for prose. Its C8 aggregate decode was 341.26, 237.45, and 95.55 tok/s, and effective prefill reached 1,502.7–1,664.4 tok/s for the measured 2,950/5,853-token inputs. The 18 functional/length checks, three cold retrieval checks, and all 108 matrix requests passed. See [`docs/VLLM-CROSSCHECK-20260911.md`](docs/VLLM-CROSSCHECK-20260911.md) and [`results/vllm-crosscheck/`](results/vllm-crosscheck/).
+
+The eight-node TP8/EP8/PP1 follow-up reached three-run C1 medians of
+**108.03/83.24/37.53 tok/s** and C8 aggregate decode of
+**364.37/273.91/103.38 tok/s** for count/code/prose.  Effective prefill was
+1,461.6/1,685.3 tok/s, essentially flat versus four nodes.  Its final
+`gpu-memory-utilization=0.65` avoids the driver workspace OOM observed at 0.80
+while retaining sufficient KV capacity for the C1-C8 test.  The same 21
+correctness/retrieval checks and 108 matrix requests passed; compact receipts
+are in [`results/vllm-crosscheck-8node/`](results/vllm-crosscheck-8node/).
 
 ## 7. Repository layout
 
