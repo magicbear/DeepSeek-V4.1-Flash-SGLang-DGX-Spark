@@ -1,0 +1,17 @@
+{
+  "generated": "2026-09-11T03:26:20.448778",
+  "selected": {
+    "4": "spark4-hybrid",
+    "8": "spark8-hybrid"
+  },
+  "references": {
+    "4机 eager B": "historical-workspace/bench/20260911-014733-spark4-eager-b/summary.json",
+    "4机全 Triton": "historical-workspace/bench/20260911-024212-spark4-triton-dspark-graph/summary.json",
+    "4机混合": "historical-workspace/bench/20260911-030201-spark4-hybrid/summary.json",
+    "8机混合": "historical-workspace/bench/20260911-031802-spark8-hybrid/summary.json"
+  },
+  "matrices": {
+    "4": "historical-workspace/matrix-20260911/bench-spark4-hybrid.json",
+    "8": "historical-workspace/matrix-20260911/bench-spark8-hybrid.json"
+  }
+}

@@ -1,0 +1,1288 @@
+{
+  "request": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[bench v1 run prose c8 s7] Explain in about 120 words how a refrigerator keeps food cold, for a curious 12-year-old."
+      }
+    ],
+    "max_tokens": 200,
+    "temperature": 0,
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    },
+    "chat_template_kwargs": {
+      "thinking": false
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 1.3454910980071872,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064452,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.345509847975336,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064452,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "A"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.4867018299992196,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064452,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " refrigerator works"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.6432899750070646,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064452,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " by moving heat"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.8209434219752438,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064453,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " from inside"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.9791107079945505,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064453,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " to outside,"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.152230874984525,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064453,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " like carrying"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.3038509669713676,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064453,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " warmth"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.4507361159776337,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064453,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " away in"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.6081766469869763,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064453,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " a bucket. A"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.7821704400121234,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064454,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " special liquid"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.968562035996001,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064454,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " called refrigerant"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.1431386129697785,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064454,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " flows"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.319614502019249,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064454,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " through pipes"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.4911603479995392,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064454,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ". First"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.6665205800090916,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064454,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ", it evapor"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.8362182040000334,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064455,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "ates inside the fridge, soaking"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.002727676008362,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064455,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " up heat from"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.17049601697363,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064455,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " your"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.342802697967272,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064455,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " food and air"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.51415022299625,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064455,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ". That"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.68137156998273,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064455,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " turns"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.86296008300269,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064456,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " it"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.021430601016618,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064456,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " into a gas"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.188224176003132,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064456,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ". Then a"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.362065637018532,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064456,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " compressor squee"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.519068204972427,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064456,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "zes the"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.676787068019621,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064456,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " gas, making"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.835538367973641,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064457,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " it hot"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.998993590008467,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064457,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ". Next"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 6.173072422971018,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064457,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ", the"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 6.337017296988051,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064457,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " hot"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 6.504106673994102,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064457,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " gas flows"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 6.669018835993484,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064457,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " through coils behind"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 6.835540967003908,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064458,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " or"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.003063176991418,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064458,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " under"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.166285626008175,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064458,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " the fridge, where it releases"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.3318987030070275,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064458,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " heat into"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.503829150984529,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064458,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " your"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.6702710230019875,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064458,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " kitchen and"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.8532193559804,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064459,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " turns"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 8.025580697983969,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064459,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " back into a"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 8.216813997016288,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064459,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " liquid. Finally, it"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 8.3823566219653,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064459,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " cycles"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 8.556297135015484,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064459,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " back"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 8.73757255601231,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064459,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " inside to"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 8.927202404011041,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064460,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " absorb"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 9.108074322983157,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064460,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " more heat."
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 9.306227107997984,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064460,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " So"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 9.50002689397661,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064460,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " the fridge doesn"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 9.692881683993619,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064460,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "'t \""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 9.882648052996956,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064461,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "make"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 10.085330408997834,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064461,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " cold"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 10.305091729969718,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064461,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "\"—it removes"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 10.514939384011086,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064461,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " heat,"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 10.722453952999786,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064461,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " keeping"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 10.931545772007667,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064462,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " your food chilly"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 11.112342419975903,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064462,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "."
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 11.264804337988608,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064462,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "matched_stop": 1
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 11.264834127970971,
+      "data": {
+        "id": "c305009ccbbf486e9c7b658eccabf3c3",
+        "object": "chat.completion.chunk",
+        "created": 1789064462,
+        "model": "deepseek-v4.1-flash",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 36,
+          "total_tokens": 159,
+          "completion_tokens": 123,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  ],
+  "result": {
+    "ttft_s": 1.345509847975336,
+    "total_s": 11.266003265976906,
+    "completion_tokens": 123,
+    "prompt_tokens": 36,
+    "decode_tok_s": 12.299261819762423,
+    "chars": 578,
+    "finish_elapsed_s": 11.264804337988608,
+    "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. So the fridge doesn't \"make cold\"—it removes heat, keeping your food chilly."
+  }
+}

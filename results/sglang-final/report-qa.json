@@ -1,0 +1,37 @@
+{
+  "pages": 13,
+  "embedded_figures": 6,
+  "self_contained_html": true,
+  "visual_review": "All 13 rendered pages inspected; no clipped text, overlapping tables or orphan pages. Embedded C1 plot RGB pixels match source figure.",
+  "data_verification": {
+    "4": {
+      "matrix_cells": 24,
+      "requests": 108,
+      "c1_repeat_samples": 9,
+      "correctness_checks": 18,
+      "retrieval_checks": 3,
+      "prefill_points": 2,
+      "passed": true
+    },
+    "8": {
+      "matrix_cells": 24,
+      "requests": 108,
+      "c1_repeat_samples": 9,
+      "correctness_checks": 18,
+      "retrieval_checks": 3,
+      "prefill_points": 2,
+      "passed": true
+    }
+  },
+  "service_health_http": 200,
+  "artifacts": {
+    "html": {
+      "path": "results/DGX-Spark-DeepSeek-V4.1-Flash-Spark-4-8机性能报告-20260910.html",
+      "sha256": "2f3298283313a66a88500bfdee7bdcb3565b81e308bd0f4cce2df777d63f337f"
+    },
+    "pdf": {
+      "path": "results/DGX-Spark-DeepSeek-V4.1-Flash-Spark-4-8机性能报告-20260910.pdf",
+      "sha256": "7df3e27cf54d65700855bf1ab1bb862c6d62d18fae45d673727c1686706489ad"
+    }
+  }
+}

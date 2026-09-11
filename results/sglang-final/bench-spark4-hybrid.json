@@ -1,0 +1,1680 @@
+{
+  "label": "spark4-hybrid",
+  "prompt_set": "v1",
+  "model": "deepseek-v4.1-flash",
+  "notes": "spark4-hybrid; TP=EP=node count, PP1, DSpark5, decode graphs BS1-8, local Engram, context/KV 8192.",
+  "started": "2026-09-10T19:02:38Z",
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "categories": [
+    "coding",
+    "prose",
+    "ceiling_count"
+  ],
+  "prefill_shape_warmed": true,
+  "batches": [
+    {
+      "c": 1,
+      "category": "coding",
+      "wall_s": 3.89,
+      "tokens": 200,
+      "agg_tok_s": 51.41,
+      "per_stream_tok_s": 55.7,
+      "ttft_mean_s": 0.315,
+      "requests": [
+        {
+          "ttft_s": 0.31526078400202096,
+          "total_s": 3.8879258320084773,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 55.70152421426623,
+          "chars": 619,
+          "finish_elapsed_s": 3.8878739720094018,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/2f6631aab8db49219f72a2aa74790285.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 1,
+      "category": "prose",
+      "wall_s": 5.14,
+      "tokens": 118,
+      "agg_tok_s": 22.96,
+      "per_stream_tok_s": 24.04,
+      "ttft_mean_s": 0.271,
+      "requests": [
+        {
+          "ttft_s": 0.2714749989681877,
+          "total_s": 5.137622073991224,
+          "completion_tokens": 118,
+          "prompt_tokens": 36,
+          "decode_tok_s": 24.043856907415467,
+          "chars": 585,
+          "finish_elapsed_s": 5.137582813971676,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat escapes through coils on the back or bottom of the fridge. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. Because heat keeps getting removed, the inside stays cold, slowing down the germs that make food spoil.",
+          "raw_file": "raw-spark4-hybrid/6822f0706b8741658e3fd1a7fcf2fc0d.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 1,
+      "category": "ceiling_count",
+      "wall_s": 3.754,
+      "tokens": 239,
+      "agg_tok_s": 63.67,
+      "per_stream_tok_s": 68.08,
+      "ttft_mean_s": 0.254,
+      "requests": [
+        {
+          "ttft_s": 0.25415279204025865,
+          "total_s": 3.7500197020126507,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 68.08122576557165,
+          "chars": 309,
+          "finish_elapsed_s": 3.749977042025421,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/037061b6e8b94b029ec0c4750524af48.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 2,
+      "category": "coding",
+      "wall_s": 4.774,
+      "tokens": 400,
+      "agg_tok_s": 83.79,
+      "per_stream_tok_s": 48.38,
+      "ttft_mean_s": 0.564,
+      "requests": [
+        {
+          "ttft_s": 0.5638877799501643,
+          "total_s": 4.771506275981665,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 47.29565774743698,
+          "chars": 619,
+          "finish_elapsed_s": 4.771462205972057,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/93eab7c714974a07bddc076220b77327.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5643471630173735,
+          "total_s": 4.58799559000181,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 49.45840834619515,
+          "chars": 606,
+          "finish_elapsed_s": 4.587929940025788,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\n# [(1, 6), (8, 10), (15, 18)]\n\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n# [(1, ",
+          "raw_file": "raw-spark4-hybrid/7762218b5f50417399a3992271519878.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 2,
+      "category": "prose",
+      "wall_s": 6.824,
+      "tokens": 249,
+      "agg_tok_s": 36.49,
+      "per_stream_tok_s": 19.23,
+      "ttft_mean_s": 0.398,
+      "requests": [
+        {
+          "ttft_s": 0.3983570749987848,
+          "total_s": 6.8196088499971665,
+          "completion_tokens": 121,
+          "prompt_tokens": 36,
+          "decode_tok_s": 18.688148232845993,
+          "chars": 585,
+          "finish_elapsed_s": 6.819539019023068,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. Because heat keeps getting removed, the inside stays cold, keeping your food fresh.",
+          "raw_file": "raw-spark4-hybrid/225e3fbd4bc14e20b2d5ef557b4d0f8f.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.3984120550449006,
+          "total_s": 6.821055669046473,
+          "completion_tokens": 128,
+          "prompt_tokens": 36,
+          "decode_tok_s": 19.77806868720452,
+          "chars": 622,
+          "finish_elapsed_s": 6.819665920047555,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat travels through coils on the back or bottom of the fridge and escapes into your kitchen. Next, the refrigerant cools down, turns back into a liquid, and cycles through again. Because heat keeps getting removed, the inside stays cold. The fridge doesn’t “create” cold—it just moves heat out, and insulation helps keep it out.",
+          "raw_file": "raw-spark4-hybrid/cead3307672840ab9afb8d01bbfae1ef.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 2,
+      "category": "ceiling_count",
+      "wall_s": 4.232,
+      "tokens": 478,
+      "agg_tok_s": 112.96,
+      "per_stream_tok_s": 61.79,
+      "ttft_mean_s": 0.317,
+      "requests": [
+        {
+          "ttft_s": 0.3170236070291139,
+          "total_s": 4.229008521011565,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 60.83959955180169,
+          "chars": 309,
+          "finish_elapsed_s": 4.22894942102721,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/69701bc4101c467baebc963802653a0b.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.3174313990166411,
+          "total_s": 4.110822113987524,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 62.741751564153525,
+          "chars": 309,
+          "finish_elapsed_s": 4.110758714028634,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/2a68dc57f2d7437ab5a905d17ba1f698.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 3,
+      "category": "coding",
+      "wall_s": 5.794,
+      "tokens": 600,
+      "agg_tok_s": 103.55,
+      "per_stream_tok_s": 43.7,
+      "ttft_mean_s": 1.067,
+      "requests": [
+        {
+          "ttft_s": 1.06685900996672,
+          "total_s": 5.66632534697419,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 43.26630487587662,
+          "chars": 619,
+          "finish_elapsed_s": 5.666281136975158,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/67a9afebb565411c81801147a2f3bbaf.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.0668522199848667,
+          "total_s": 5.418425126990769,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 45.73148336814841,
+          "chars": 617,
+          "finish_elapsed_s": 5.4183401959599,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))              # [(1",
+          "raw_file": "raw-spark4-hybrid/61a55c0733f144f080a54da9e9165206.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.0668466900242493,
+          "total_s": 5.792357917001937,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 42.11207988415123,
+          "chars": 626,
+          "finish_elapsed_s": 5.792331647011451,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, 5)]\n```",
+          "raw_file": "raw-spark4-hybrid/8abcf2b69d954b84b8609b087e717c46.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 3,
+      "category": "prose",
+      "wall_s": 8.791,
+      "tokens": 376,
+      "agg_tok_s": 42.77,
+      "per_stream_tok_s": 15.91,
+      "ttft_mean_s": 0.525,
+      "requests": [
+        {
+          "ttft_s": 0.5245927260257304,
+          "total_s": 8.330794564972166,
+          "completion_tokens": 121,
+          "prompt_tokens": 36,
+          "decode_tok_s": 15.372645379795818,
+          "chars": 585,
+          "finish_elapsed_s": 8.330666243971791,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. Because heat keeps getting removed, the inside stays cold, keeping your food fresh.",
+          "raw_file": "raw-spark4-hybrid/6a4e2ce53d2647fa9fee1c0a94005cf8.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5249297679984011,
+          "total_s": 8.788813300954644,
+          "completion_tokens": 129,
+          "prompt_tokens": 36,
+          "decode_tok_s": 15.489156087027606,
+          "chars": 616,
+          "finish_elapsed_s": 8.78877573099453,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases that heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. So your fridge doesn't \"make cold\"—it removes heat, keeping your food chilly while warming the room slightly.",
+          "raw_file": "raw-spark4-hybrid/3182c664f47249fea17dc2ace9546f5f.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5247590560466051,
+          "total_s": 7.931300682015717,
+          "completion_tokens": 126,
+          "prompt_tokens": 36,
+          "decode_tok_s": 16.877273857787227,
+          "chars": 600,
+          "finish_elapsed_s": 7.931168471055571,
+          "text": "A refrigerator works by moving heat from inside to outside, using a special fluid called refrigerant. First, the refrigerant flows through pipes inside the fridge and absorbs heat from your food, turning into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas travels through coils on the back or bottom of the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it flows through a tiny valve that makes it cold again, and the cycle repeats. So a fridge doesn't really \"make cold\"—it carries heat away from your food and dumps it outside!",
+          "raw_file": "raw-spark4-hybrid/6d8677c72d984022b1c5a71d5f47747e.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 3,
+      "category": "ceiling_count",
+      "wall_s": 4.871,
+      "tokens": 717,
+      "agg_tok_s": 147.21,
+      "per_stream_tok_s": 54.9,
+      "ttft_mean_s": 0.487,
+      "requests": [
+        {
+          "ttft_s": 0.4870709629612975,
+          "total_s": 4.868241578980815,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 54.32378918675307,
+          "chars": 309,
+          "finish_elapsed_s": 4.868208647996653,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/bbdfbf68aaf44d26b88df9b8a91fd5c1.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.48664340999675915,
+          "total_s": 4.86740737297805,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 54.32895186321574,
+          "chars": 309,
+          "finish_elapsed_s": 4.867364771955181,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/974391f617144a2e939b471e1c2ae765.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.4870586129836738,
+          "total_s": 4.732513713999651,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 56.06112970249726,
+          "chars": 309,
+          "finish_elapsed_s": 4.732424363959581,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/831d070c3a8049b6af6128e5f9037b08.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 4,
+      "category": "coding",
+      "wall_s": 5.942,
+      "tokens": 800,
+      "agg_tok_s": 134.64,
+      "per_stream_tok_s": 40.48,
+      "ttft_mean_s": 0.774,
+      "requests": [
+        {
+          "ttft_s": 0.7734319120063446,
+          "total_s": 5.559895090002101,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 41.57651476716662,
+          "chars": 626,
+          "finish_elapsed_s": 5.5597878900007345,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, 5)]\n```",
+          "raw_file": "raw-spark4-hybrid/08783c2b86df4fe6a869133bb5193907.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.7740197660168633,
+          "total_s": 5.718245827010833,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 40.249626240199284,
+          "chars": 629,
+          "finish_elapsed_s": 5.718165056023281,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, ",
+          "raw_file": "raw-spark4-hybrid/48e11742f41b4bd1a8ee44f0b063a822.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.7740275060059503,
+          "total_s": 5.938393010990694,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 38.53366400718742,
+          "chars": 630,
+          "finish_elapsed_s": 5.938343050016556,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, 5)]\n```\n\n**",
+          "raw_file": "raw-spark4-hybrid/163c320250314040a5aecabc03bc742e.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.7745937400031835,
+          "total_s": 5.5615454820217565,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 41.57227331231123,
+          "chars": 619,
+          "finish_elapsed_s": 5.561438050994184,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/6424c230dfd142969d1d3bc11ba95695.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 4,
+      "category": "prose",
+      "wall_s": 8.018,
+      "tokens": 470,
+      "agg_tok_s": 58.62,
+      "per_stream_tok_s": 17.51,
+      "ttft_mean_s": 0.659,
+      "requests": [
+        {
+          "ttft_s": 0.6592123520094901,
+          "total_s": 7.281966496026143,
+          "completion_tokens": 118,
+          "prompt_tokens": 36,
+          "decode_tok_s": 17.666666203572998,
+          "chars": 589,
+          "finish_elapsed_s": 7.281854035041761,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat escapes through coils on the back or bottom of the fridge. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. Because heat keeps getting removed, the inside stays cold, slowing down bacteria so your food lasts longer.",
+          "raw_file": "raw-spark4-hybrid/d9d18ae56a4b42eea108f875f9fce2a3.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.6587583189830184,
+          "total_s": 8.011416691995692,
+          "completion_tokens": 121,
+          "prompt_tokens": 36,
+          "decode_tok_s": 16.32075481471166,
+          "chars": 585,
+          "finish_elapsed_s": 8.011359431024175,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. Because heat keeps getting removed, the inside stays cold, keeping your food fresh.",
+          "raw_file": "raw-spark4-hybrid/ea4a426e47a947ad8224ef60840df593.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.65840570704313,
+          "total_s": 6.554839956050273,
+          "completion_tokens": 115,
+          "prompt_tokens": 36,
+          "decode_tok_s": 19.333900331948286,
+          "chars": 567,
+          "finish_elapsed_s": 6.554784505045973,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat escapes through coils on the back or bottom of the fridge. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. Because heat keeps getting removed, the inside stays cold, and your food stays fresh.",
+          "raw_file": "raw-spark4-hybrid/9535fd5d82354510923f5767b9f41eb7.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.6587943800259382,
+          "total_s": 7.537121165019926,
+          "completion_tokens": 116,
+          "prompt_tokens": 36,
+          "decode_tok_s": 16.71932312088718,
+          "chars": 572,
+          "finish_elapsed_s": 7.5370632649865,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, it absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to soak up more heat. Because heat is constantly removed, the inside stays cold, slowing down bacteria so your food lasts longer.",
+          "raw_file": "raw-spark4-hybrid/f0d0141149f24c5db5fac08ef5201dff.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 4,
+      "category": "ceiling_count",
+      "wall_s": 5.02,
+      "tokens": 956,
+      "agg_tok_s": 190.45,
+      "per_stream_tok_s": 53.68,
+      "ttft_mean_s": 0.512,
+      "requests": [
+        {
+          "ttft_s": 0.5116099279839545,
+          "total_s": 5.016810130968224,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 52.84013416569417,
+          "chars": 309,
+          "finish_elapsed_s": 5.015762004011776,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/f9b2e28897b6475eb2eb89e06b463c19.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5112863060203381,
+          "total_s": 4.8757453599828295,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 54.53210487815576,
+          "chars": 309,
+          "finish_elapsed_s": 4.875687799998559,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/7651f288de814faba55c08a44748f733.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5114193569752388,
+          "total_s": 4.877265959978104,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 54.5146538118823,
+          "chars": 309,
+          "finish_elapsed_s": 4.877217969973572,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/63874cab230d4a0eb7b6df456178e814.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5121719020535238,
+          "total_s": 5.016155406017788,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 52.843773892818945,
+          "chars": 309,
+          "finish_elapsed_s": 5.016013745043892,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/ae75c121e2d14bf1a457d9e91a841d3d.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 5,
+      "category": "coding",
+      "wall_s": 6.542,
+      "tokens": 1000,
+      "agg_tok_s": 152.86,
+      "per_stream_tok_s": 36.92,
+      "ttft_mean_s": 0.974,
+      "requests": [
+        {
+          "ttft_s": 0.9230723310029134,
+          "total_s": 6.2601877599954605,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 37.286561803763874,
+          "chars": 616,
+          "finish_elapsed_s": 6.260115768993273,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/0d90ce9d6c3943b7978ed4a40026ae05.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9235517740016803,
+          "total_s": 6.537384908006061,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 35.44920561431111,
+          "chars": 616,
+          "finish_elapsed_s": 6.537217765988316,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/c4bd3370f59243988b0e43b700a4d822.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9227188490331173,
+          "total_s": 6.116161939047743,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 38.31843458693435,
+          "chars": 606,
+          "finish_elapsed_s": 6.116041649016552,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\n# [(1, 6), (8, 10), (15, 18)]\n\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n# [(1, ",
+          "raw_file": "raw-spark4-hybrid/6bd6149358fd4335a0af7331e630415c.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.1753505910164677,
+          "total_s": 6.4004136139992625,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 38.08600768041904,
+          "chars": 619,
+          "finish_elapsed_s": 6.4003666039789096,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/440d8b6e6b3849b187ce3034e06db51d.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9236821039812639,
+          "total_s": 6.53886995697394,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 35.447239526613025,
+          "chars": 630,
+          "finish_elapsed_s": 6.5376594589906745,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, 5)]\n```\n\n**",
+          "raw_file": "raw-spark4-hybrid/a86fba07e432411781b64714f44c2309.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 5,
+      "category": "prose",
+      "wall_s": 10.561,
+      "tokens": 604,
+      "agg_tok_s": 57.19,
+      "per_stream_tok_s": 13.98,
+      "ttft_mean_s": 0.808,
+      "requests": [
+        {
+          "ttft_s": 0.8049180340021849,
+          "total_s": 10.556867106002755,
+          "completion_tokens": 129,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.12562422396924,
+          "chars": 641,
+          "finish_elapsed_s": 10.556835185969248,
+          "text": "A refrigerator works by moving heat, not by making cold. A special liquid called refrigerant flows through pipes. First, it passes through a compressor that squeezes it, making it hot. Then it travels through coils on the back, where that heat escapes into your kitchen. Next, the refrigerant expands inside the fridge, which makes it very cold. Because cold things absorb heat, the refrigerant soaks up warmth from your food. It then cycles back to the compressor to start over. A thermostat watches the temperature and switches the compressor on and off to keep things just right. So your fridge isn't creating cold—it's carrying heat out!",
+          "raw_file": "raw-spark4-hybrid/acba31c59e754b24a967834a712b902b.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8048228939878754,
+          "total_s": 9.611429115000647,
+          "completion_tokens": 117,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.172057775281262,
+          "chars": 565,
+          "finish_elapsed_s": 9.611343635013327,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it passes through a part inside the fridge and absorbs heat, turning into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas travels through coils on the back or bottom, where it releases heat into your kitchen and turns back into a liquid. Finally, it flows back inside to soak up more heat. This cycle repeats over and over, keeping the inside cold so your food stays fresh.",
+          "raw_file": "raw-spark4-hybrid/f174e7f8639f4e5d8d450cc9c1a94ee9.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.804535722010769,
+          "total_s": 7.926788262033369,
+          "completion_tokens": 112,
+          "prompt_tokens": 36,
+          "decode_tok_s": 15.585106254612674,
+          "chars": 551,
+          "finish_elapsed_s": 7.926720081013627,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat escapes through coils on the back or bottom of the fridge. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. Because heat keeps leaving the inside, the food stays cold and fresh.",
+          "raw_file": "raw-spark4-hybrid/6c77e852cfd542edb75991e7d75d20fe.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8052853469853289,
+          "total_s": 9.763566890964285,
+          "completion_tokens": 125,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.842021146388982,
+          "chars": 597,
+          "finish_elapsed_s": 9.763514689984731,
+          "text": "A refrigerator works by moving heat, not by making “cold.” A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat escapes through coils on the back or bottom of the fridge. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. Insulation in the walls helps trap the cold air inside, while the motor keeps the cycle going. So your food stays cold because the fridge keeps carrying its heat away!",
+          "raw_file": "raw-spark4-hybrid/5ccddd0d0d9e4b3bad8cdd4d766234ec.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8184841659967788,
+          "total_s": 9.277388663962483,
+          "completion_tokens": 121,
+          "prompt_tokens": 36,
+          "decode_tok_s": 14.186341533736227,
+          "chars": 572,
+          "finish_elapsed_s": 9.27732464397559,
+          "text": "A refrigerator works by moving heat, not by making \"cold.\" A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. The hot gas travels through coils on the back or bottom, where it releases heat into your kitchen. As it cools, the refrigerant turns back into a liquid and cycles around again. This loop keeps repeating, pulling heat out of the food compartment. That's why the back of a fridge feels warm—it's dumping the heat it stole from your food!",
+          "raw_file": "raw-spark4-hybrid/ef730998604a47a08c03fc1f1c7a257c.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 5,
+      "category": "ceiling_count",
+      "wall_s": 5.445,
+      "tokens": 1195,
+      "agg_tok_s": 219.47,
+      "per_stream_tok_s": 51.44,
+      "ttft_mean_s": 0.682,
+      "requests": [
+        {
+          "ttft_s": 0.6799416830181144,
+          "total_s": 5.441727294004522,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 49.98177838680342,
+          "chars": 309,
+          "finish_elapsed_s": 5.441677013004664,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/ec866d8d7e884b9c8692d5e100586000.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.679526120016817,
+          "total_s": 5.275063541019335,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 51.7900259456126,
+          "chars": 309,
+          "finish_elapsed_s": 5.275005571020301,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/613d59affdad4a0797b3602851c6fd5a.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.6797337909811176,
+          "total_s": 5.278458023967687,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 51.754278664555486,
+          "chars": 309,
+          "finish_elapsed_s": 5.278387392987497,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/5e9bb85460734a729b0463a64da60603.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.6791627469938248,
+          "total_s": 5.27607550797984,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 51.77451549093191,
+          "chars": 309,
+          "finish_elapsed_s": 5.276018898002803,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/8925a03c831f40d4b561feebb94ee40d.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.691555101017002,
+          "total_s": 5.277474867005367,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 51.9101427694296,
+          "chars": 309,
+          "finish_elapsed_s": 5.276400899980217,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/9c888b04e74842dd8070bb317314a785.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 6,
+      "category": "coding",
+      "wall_s": 6.444,
+      "tokens": 1200,
+      "agg_tok_s": 186.21,
+      "per_stream_tok_s": 37.58,
+      "ttft_mean_s": 1.117,
+      "requests": [
+        {
+          "ttft_s": 1.1037093180348165,
+          "total_s": 6.440096052014269,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 37.29862733996852,
+          "chars": 629,
+          "finish_elapsed_s": 6.439026303996798,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, ",
+          "raw_file": "raw-spark4-hybrid/20eb4a2516cc4fab87d138660d2e227c.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.1031694650300778,
+          "total_s": 6.440723206032999,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 37.29652668113556,
+          "chars": 619,
+          "finish_elapsed_s": 6.438786952989176,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/a60839cf2bc543d4ad11e1eed95419b0.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.1443470120429993,
+          "total_s": 6.4390049740322866,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 37.59391455316068,
+          "chars": 629,
+          "finish_elapsed_s": 6.437756925995927,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, ",
+          "raw_file": "raw-spark4-hybrid/ec8b99bd0005488c93f25f28ea818362.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.1438037879997864,
+          "total_s": 6.287739735038485,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 38.68676590363511,
+          "chars": 617,
+          "finish_elapsed_s": 6.287681684014387,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))              # [(1",
+          "raw_file": "raw-spark4-hybrid/459e94b59679419fa0d6e42b5c951aeb.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.1026786420261487,
+          "total_s": 6.437322593003046,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 37.31138289265357,
+          "chars": 619,
+          "finish_elapsed_s": 6.43617165600881,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/b42ceae64e514f6a8536c8cf208e7e5b.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.1033270150073804,
+          "total_s": 6.43706846103305,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 37.31077140355661,
+          "chars": 616,
+          "finish_elapsed_s": 6.436907440016512,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/f05d1d657ddb4acb841548e4f7d1895e.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 6,
+      "category": "prose",
+      "wall_s": 10.486,
+      "tokens": 746,
+      "agg_tok_s": 71.15,
+      "per_stream_tok_s": 13.67,
+      "ttft_mean_s": 0.786,
+      "requests": [
+        {
+          "ttft_s": 1.0377900340245105,
+          "total_s": 9.755185004032683,
+          "completion_tokens": 124,
+          "prompt_tokens": 36,
+          "decode_tok_s": 14.109803060989165,
+          "chars": 597,
+          "finish_elapsed_s": 9.755133534024935,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. Because heat keeps getting removed, the inside stays cold, and your food stays fresh.",
+          "raw_file": "raw-spark4-hybrid/bd86ddad93754e22aac3afc539590184.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.03757411200786,
+          "total_s": 9.24848265905166,
+          "completion_tokens": 123,
+          "prompt_tokens": 36,
+          "decode_tok_s": 14.858569547301874,
+          "chars": 615,
+          "finish_elapsed_s": 9.248324118030723,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat travels through coils on the back or bottom of the fridge and escapes into your kitchen. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. Because heat keeps getting removed, the inside stays cold, slowing down the germs that make food spoil.",
+          "raw_file": "raw-spark4-hybrid/1b45617413024975887f21d6b31cc7aa.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5329099509981461,
+          "total_s": 10.482452085008845,
+          "completion_tokens": 132,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.16651682961784,
+          "chars": 653,
+          "finish_elapsed_s": 10.482390264980495,
+          "text": "A refrigerator works by moving heat from inside to outside, using a special fluid called refrigerant. A compressor pumps this fluid through pipes, squeezing it into a hot, high-pressure gas. That gas flows through coils on the back or bottom, where it releases heat into your kitchen and turns into a liquid. Next, the liquid passes through a tiny valve into a low-pressure area, where it expands and becomes super cold. Those cold pipes run inside the fridge, absorbing heat from your food and air. Finally, the refrigerant returns to the compressor to repeat the cycle. So a fridge doesn't \"make cold\"—it carries heat away, keeping your snacks chilly!",
+          "raw_file": "raw-spark4-hybrid/77eb395b694140cca44a2e8c0b860c87.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5334942550398409,
+          "total_s": 9.756290862045716,
+          "completion_tokens": 123,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.22817802694665,
+          "chars": 601,
+          "finish_elapsed_s": 9.756230731029063,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, it evaporates and absorbs heat from your food, making the inside cold. Then a compressor squeezes the refrigerant, which makes it hot. That heat travels through coils on the back or bottom of the fridge and escapes into your kitchen. Finally, the refrigerant cools down and turns back into liquid, ready to repeat the cycle. So a fridge doesn’t “make cold”—it removes heat, over and over, keeping your snacks chilly.",
+          "raw_file": "raw-spark4-hybrid/21f6fdf1def0481eba5679e95e5b91cf.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.037644502997864,
+          "total_s": 10.166862297977787,
+          "completion_tokens": 122,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.254227598825764,
+          "chars": 585,
+          "finish_elapsed_s": 10.166807186964434,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils on the back or bottom, where it releases that heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. Because heat keeps getting removed, the inside stays cold, keeping your food fresh.",
+          "raw_file": "raw-spark4-hybrid/c6ec697730b84b69b8b5f52eb060fdfd.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.5336302560172044,
+          "total_s": 9.576860872039106,
+          "completion_tokens": 122,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.3803125839023,
+          "chars": 591,
+          "finish_elapsed_s": 9.57676727103535,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas flows through coils on the back or bottom, where it releases heat into your kitchen and turns back into a liquid. Finally, it travels back inside to soak up more heat. This cycle repeats over and over. Because heat keeps getting removed, the inside stays cold, and your food stays fresh.",
+          "raw_file": "raw-spark4-hybrid/cff9c7a8d9f84ed4b0cc74df55447494.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 6,
+      "category": "ceiling_count",
+      "wall_s": 5.811,
+      "tokens": 1434,
+      "agg_tok_s": 246.76,
+      "per_stream_tok_s": 47.98,
+      "ttft_mean_s": 0.709,
+      "requests": [
+        {
+          "ttft_s": 0.7203558050096035,
+          "total_s": 5.643798495992087,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 48.353918229970304,
+          "chars": 309,
+          "finish_elapsed_s": 5.642397465999238,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/0383844201b348bc81a9479413c930dd.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.7031794789945707,
+          "total_s": 5.807488938968163,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 46.627660343272424,
+          "chars": 309,
+          "finish_elapsed_s": 5.807445878977887,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/8f47952687114c528e3d56d4f62e297e.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.703674562042579,
+          "total_s": 5.643463543034159,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 48.18836406179912,
+          "chars": 309,
+          "finish_elapsed_s": 5.642626208020374,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/795d678933b24e1fb9ff4bce25684792.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.7199422820121981,
+          "total_s": 5.642325085995253,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 48.35317730872668,
+          "chars": 309,
+          "finish_elapsed_s": 5.642059364006855,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/e0ae4f4979b24bb583644dc2df931b92.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.7039816639735363,
+          "total_s": 5.645767769019585,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 48.18219402695077,
+          "chars": 309,
+          "finish_elapsed_s": 5.643565773963928,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/bccced1ec61d4ac8a79cd88808b427fc.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.7036415420006961,
+          "total_s": 5.645115553983487,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 48.18427648489693,
+          "chars": 309,
+          "finish_elapsed_s": 5.643012169981375,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/e498eb8a15f64cb5a26a72be109581d8.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 7,
+      "category": "coding",
+      "wall_s": 7.472,
+      "tokens": 1400,
+      "agg_tok_s": 187.36,
+      "per_stream_tok_s": 33.18,
+      "ttft_mean_s": 1.236,
+      "requests": [
+        {
+          "ttft_s": 1.2675117930048145,
+          "total_s": 7.172720490023494,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 33.6993719260343,
+          "chars": 617,
+          "finish_elapsed_s": 7.17266635899432,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))              # [(1",
+          "raw_file": "raw-spark4-hybrid/c04d7481525f44d2bf9d2faadd991a82.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2126707030110992,
+          "total_s": 7.173541605996434,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 33.3908715940016,
+          "chars": 626,
+          "finish_elapsed_s": 7.172383358003572,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, 5)]\n```",
+          "raw_file": "raw-spark4-hybrid/0f971b91339648e0a552fa00d47b4983.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2665063149761409,
+          "total_s": 7.339106029947288,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 32.77091324421811,
+          "chars": 640,
+          "finish_elapsed_s": 7.33896448899759,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, ",
+          "raw_file": "raw-spark4-hybrid/3950f3cc1cdf4a88b6fa259aa43c1e0b.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2120314490166493,
+          "total_s": 6.990852405026089,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 34.43674552554536,
+          "chars": 617,
+          "finish_elapsed_s": 6.990742444002535,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))              # [(1",
+          "raw_file": "raw-spark4-hybrid/6a43f5dd29534a5bbb7ae448ca75450c.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2123586810193956,
+          "total_s": 7.17465230304515,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 33.376696135775425,
+          "chars": 629,
+          "finish_elapsed_s": 7.174602493003476,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, ",
+          "raw_file": "raw-spark4-hybrid/1743facebc27437c90296f5246dba33f.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2665072849486023,
+          "total_s": 7.468376201984938,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 32.08742849188782,
+          "chars": 629,
+          "finish_elapsed_s": 7.468313080957159,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\n# Example calls\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7,",
+          "raw_file": "raw-spark4-hybrid/b87e05cfbd314b559929a49318d8283c.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2125005719717592,
+          "total_s": 7.341027404007036,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 32.47715149472505,
+          "chars": 614,
+          "finish_elapsed_s": 7.339885235996917,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\n# Example calls\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/bb9400b8d2dd46e3aa9942bc75e969a0.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 7,
+      "category": "prose",
+      "wall_s": 10.755,
+      "tokens": 875,
+      "agg_tok_s": 81.36,
+      "per_stream_tok_s": 13.38,
+      "ttft_mean_s": 0.999,
+      "requests": [
+        {
+          "ttft_s": 0.9819820370175876,
+          "total_s": 10.617764886992518,
+          "completion_tokens": 128,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.180105865704421,
+          "chars": 640,
+          "finish_elapsed_s": 10.617716476030182,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat from your food and air, then evaporates into a gas. A compressor squeezes that gas, making it hot. Next, the hot gas travels through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it flows through a tiny valve that makes it cold and low-pressure again, ready to repeat the cycle. A thermostat switches the compressor on and off to keep the temperature steady.",
+          "raw_file": "raw-spark4-hybrid/e4269b8f3d664008a7ee1304d741a075.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9818281370098703,
+          "total_s": 10.75159561901819,
+          "completion_tokens": 131,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.306423702168416,
+          "chars": 645,
+          "finish_elapsed_s": 10.751545599021483,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, it absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas travels through coils behind or under the fridge, where it releases heat into your kitchen. As it cools, the refrigerant turns back into a liquid and cycles inside again. Because heat keeps getting removed, the inside stays cold. A thermostat switches the compressor on and off to hold the right temperature. That’s why the back of a fridge feels warm!",
+          "raw_file": "raw-spark4-hybrid/a544e621e73147e3920dd74070af6edf.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.021077111014165,
+          "total_s": 10.618789374013431,
+          "completion_tokens": 124,
+          "prompt_tokens": 36,
+          "decode_tok_s": 12.817567007240754,
+          "chars": 611,
+          "finish_elapsed_s": 10.617282063991297,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat and turning into a gas. That gas gets squeezed by a compressor, which makes it hot. Then it flows through coils behind or under the fridge, where the heat escapes into your kitchen. As it cools, the refrigerant turns back into a liquid and cycles around again. Because heat keeps getting removed, the inside stays cold, keeping your food fresh. The fridge doesn't create cold—it just moves heat out!",
+          "raw_file": "raw-spark4-hybrid/7009928cd37e4039b41ecbe1d80077a5.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.0211787520092912,
+          "total_s": 10.321718602033798,
+          "completion_tokens": 123,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.117600728450647,
+          "chars": 609,
+          "finish_elapsed_s": 10.321660030982457,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, it absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas travels through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it flows back inside to soak up more heat. This cycle repeats again and again. Because heat keeps getting removed, the inside stays cold, slowing down bacteria so your food lasts longer.",
+          "raw_file": "raw-spark4-hybrid/36d44c226fdc4ac08c43efd58805acb7.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9825018109986559,
+          "total_s": 10.136661344964523,
+          "completion_tokens": 123,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.327370241169358,
+          "chars": 595,
+          "finish_elapsed_s": 10.13659581396496,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas travels through coils behind or under the fridge, where it releases heat into your kitchen. Finally, the refrigerant cools down, turns back into a liquid, and repeats the cycle. Because heat keeps getting removed, the inside stays cold. The fridge doesn't \"make cold\"—it just moves heat out!",
+          "raw_file": "raw-spark4-hybrid/5329cf3a0c5f4e2abf39c7c76793b373.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9816530249663629,
+          "total_s": 9.546008683973923,
+          "completion_tokens": 122,
+          "prompt_tokens": 36,
+          "decode_tok_s": 14.128766431733263,
+          "chars": 581,
+          "finish_elapsed_s": 9.54574109200621,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas flows through coils on the back or bottom, where it releases heat into your kitchen. As it cools, it turns back into a liquid. Finally, it flows back inside to soak up more heat. This cycle repeats over and over, so the inside stays cold while the outside gets slightly warmer.",
+          "raw_file": "raw-spark4-hybrid/fbb86ef7c4464dc4a6d36e3e79e16247.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.0221279779798351,
+          "total_s": 9.936939998005982,
+          "completion_tokens": 124,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.797363681178503,
+          "chars": 589,
+          "finish_elapsed_s": 9.936874507984612,
+          "text": "A refrigerator works by moving heat, not by making cold. A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. The hot gas travels through coils on the back or bottom, where it releases heat into your kitchen. As it cools, the refrigerant turns back into a liquid and cycles around again. This loop keeps repeating, pulling heat out of the fridge so the inside stays cold. That's why the back of a fridge feels warm — it's dumping the heat it removed from your food!",
+          "raw_file": "raw-spark4-hybrid/6ee3eefe21884136b30508fe71488a00.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 7,
+      "category": "ceiling_count",
+      "wall_s": 6.294,
+      "tokens": 1673,
+      "agg_tok_s": 265.82,
+      "per_stream_tok_s": 45.29,
+      "ttft_mean_s": 0.883,
+      "requests": [
+        {
+          "ttft_s": 0.9026859540026635,
+          "total_s": 6.116474072041456,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 45.64864419549254,
+          "chars": 309,
+          "finish_elapsed_s": 6.116422401042655,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/f4d7108bbbe14cfebcb4bc82bc25cdd9.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8694675690494478,
+          "total_s": 6.113871474051848,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 45.391421929401915,
+          "chars": 309,
+          "finish_elapsed_s": 6.112749006017111,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/12d253f018d94e528f142a99d9e60a20.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8693183879950084,
+          "total_s": 6.113140408997424,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 45.38713048298666,
+          "chars": 309,
+          "finish_elapsed_s": 6.113095587992575,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/bd1ad59bb22a4623a652cb27cbba4d9f.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9022688409895636,
+          "total_s": 6.117447878001258,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 45.63674941797658,
+          "chars": 309,
+          "finish_elapsed_s": 6.117364198027644,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/105bf1b5f9cf4a98904805cfdfee1430.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8688948550261557,
+          "total_s": 6.111542058002669,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 45.3973651321221,
+          "chars": 309,
+          "finish_elapsed_s": 6.111489867034834,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/1fd4cfdecda243c79d5d3be285477197.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9019336379715241,
+          "total_s": 6.290029969997704,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 44.17168653200244,
+          "chars": 309,
+          "finish_elapsed_s": 6.290000489971135,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/78142db95aa74ea1bfce1bc59b51426c.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8698622220545076,
+          "total_s": 6.115559685043991,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 45.38889462311893,
+          "chars": 309,
+          "finish_elapsed_s": 6.113435611012392,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/b0c341370e4949e1bdc9341bde67281d.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 8,
+      "category": "coding",
+      "wall_s": 7.697,
+      "tokens": 1600,
+      "agg_tok_s": 207.87,
+      "per_stream_tok_s": 31.53,
+      "ttft_mean_s": 1.272,
+      "requests": [
+        {
+          "ttft_s": 1.577382999996189,
+          "total_s": 7.693696241010912,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 32.54734293663677,
+          "chars": 616,
+          "finish_elapsed_s": 7.691553375974763,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/b8649ba39de449fcb844322eac1a8084.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2060117479995824,
+          "total_s": 7.5238002259866334,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 31.498588373009376,
+          "chars": 616,
+          "finish_elapsed_s": 7.523755186004564,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/7146a18849a54568a54da9ba7583aa4d.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2590824450016953,
+          "total_s": 7.5224224560079165,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 31.78275363123563,
+          "chars": 616,
+          "finish_elapsed_s": 7.520339802023955,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/df02c033ab6a4f52bd487572c0730b35.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.205267412995454,
+          "total_s": 7.520687474985607,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 31.5119346483569,
+          "chars": 616,
+          "finish_elapsed_s": 7.520335091976449,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/96bd180068e741d68bcd82c95a5150e1.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2061180679593235,
+          "total_s": 7.692020029004198,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 30.682196225702707,
+          "chars": 626,
+          "finish_elapsed_s": 7.69196407898562,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, 5)]\n```",
+          "raw_file": "raw-spark4-hybrid/2b6f6a9a4f2044a8baa0dac6bf1d1ac6.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2061419889796525,
+          "total_s": 7.522212594980374,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 31.513609777171798,
+          "chars": 616,
+          "finish_elapsed_s": 7.520873985951766,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/85eb51d480934efeab3de20d88a8904b.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2588837830116972,
+          "total_s": 7.692384221998509,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 30.938294357185644,
+          "chars": 616,
+          "finish_elapsed_s": 7.6910418620100245,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))\n```\n\nOutput:\n```\n[(1, 6), (8, 10), (15, 18)]\n[(1",
+          "raw_file": "raw-spark4-hybrid/8d44b6228143421fad55da9f3ab77b6a.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.2599669409682974,
+          "total_s": 7.525346855982207,
+          "completion_tokens": 200,
+          "prompt_tokens": 47,
+          "decode_tok_s": 31.776639135530868,
+          "chars": 619,
+          "finish_elapsed_s": 7.5224290959886275,
+          "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(sorted_intervals[0])]\n    for start, end in sorted_intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(i) for i in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5), (7, 9)]))",
+          "raw_file": "raw-spark4-hybrid/41165d6953a54625b3c6e16a6da46de5.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 8,
+      "category": "prose",
+      "wall_s": 11.411,
+      "tokens": 1002,
+      "agg_tok_s": 87.81,
+      "per_stream_tok_s": 12.42,
+      "ttft_mean_s": 1.009,
+      "requests": [
+        {
+          "ttft_s": 1.3449352040188387,
+          "total_s": 10.93010408198461,
+          "completion_tokens": 127,
+          "prompt_tokens": 36,
+          "decode_tok_s": 13.145598828906275,
+          "chars": 622,
+          "finish_elapsed_s": 10.929892240965273,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. It uses a special fluid called refrigerant that flows through pipes. First, the refrigerant evaporates inside the fridge, absorbing heat from the food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or beneath the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. Because heat keeps getting removed, the inside stays cold, and your food stays fresh.",
+          "raw_file": "raw-spark4-hybrid/bc41c19796af43c1b6dd51e7628ff55d.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8050643450114876,
+          "total_s": 11.111843226011842,
+          "completion_tokens": 124,
+          "prompt_tokens": 36,
+          "decode_tok_s": 11.93394371099709,
+          "chars": 605,
+          "finish_elapsed_s": 11.111799735983368,
+          "text": "A refrigerator keeps food cold by moving heat from the inside to the outside. A special liquid called refrigerant flows through pipes, changing between liquid and gas. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas flows through coils on the back or bottom, where it releases heat into your kitchen and turns back into a liquid. Finally, it travels back inside to soak up more heat. This cycle repeats over and over. Because heat keeps getting carried away, the inside stays cold, keeping your food fresh and safe.",
+          "raw_file": "raw-spark4-hybrid/8b9e6a6ce761456fa2acc67723ad1464.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8045314410119317,
+          "total_s": 10.93076648603892,
+          "completion_tokens": 131,
+          "prompt_tokens": 36,
+          "decode_tok_s": 12.838103739657193,
+          "chars": 657,
+          "finish_elapsed_s": 10.93063749501016,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, it absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas travels through coils behind or beneath the fridge, where it releases heat into your kitchen. As it cools, the refrigerant turns back into a liquid and cycles inside again. Because heat keeps getting removed, the inside stays cold. Insulation in the walls helps trap the cold, and a thermostat switches the compressor on and off to keep the temperature just right.",
+          "raw_file": "raw-spark4-hybrid/d195a4e8ca03418ea1a707b47249899c.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8181398939923383,
+          "total_s": 10.722330302000046,
+          "completion_tokens": 122,
+          "prompt_tokens": 36,
+          "decode_tok_s": 12.217426998156165,
+          "chars": 610,
+          "finish_elapsed_s": 10.722025549970567,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat from your food and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat travels through coils on the back or bottom of the fridge and escapes into your kitchen. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. Because heat keeps getting removed, the inside stays cold, keeping your food fresh.",
+          "raw_file": "raw-spark4-hybrid/da24ec06184440ea815334a97c43213f.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.3443668899708427,
+          "total_s": 11.263897541968618,
+          "completion_tokens": 121,
+          "prompt_tokens": 36,
+          "decode_tok_s": 12.097511311206436,
+          "chars": 592,
+          "finish_elapsed_s": 11.263762451009825,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it absorbs heat from inside the fridge and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to soak up more heat. Because heat is constantly removed, the inside stays cold, keeping your food fresh. Insulation helps trap the cold air inside.",
+          "raw_file": "raw-spark4-hybrid/e04b1ec2037b483d87d37b6c1f833153.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8050622460432351,
+          "total_s": 11.40703659702558,
+          "completion_tokens": 130,
+          "prompt_tokens": 36,
+          "decode_tok_s": 12.167619863561113,
+          "chars": 626,
+          "finish_elapsed_s": 11.406971366028301,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, it absorbs heat and turns into a gas. Then a compressor squeezes that gas, making it hot. Next, the hot gas travels through coils behind or under the fridge, where it releases heat into your kitchen. As it cools, the refrigerant turns back into a liquid and cycles inside again. Because heat keeps getting removed, the inside stays cold. The fridge doesn’t “create” cold—it just moves heat out, and insulation helps trap the cold air inside.",
+          "raw_file": "raw-spark4-hybrid/65753d24c55c4d9d8bfb481dd48ae76e.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8050546550075524,
+          "total_s": 10.514629561977927,
+          "completion_tokens": 124,
+          "prompt_tokens": 36,
+          "decode_tok_s": 12.667983920546632,
+          "chars": 600,
+          "finish_elapsed_s": 10.514571241976228,
+          "text": "A refrigerator keeps food cold by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. Inside the fridge, the refrigerant absorbs heat from your food and turns into a gas. Then a compressor squeezes that gas, making it hot. That heat travels through coils on the back or bottom of the fridge and escapes into your kitchen. Next, the refrigerant cools down and turns back into a liquid, ready to soak up more heat. This cycle repeats over and over. That's why the back of a fridge feels warm—it's dumping heat from inside!",
+          "raw_file": "raw-spark4-hybrid/2aa4893823484a47b251e812b979c260.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 1.345509847975336,
+          "total_s": 11.266003265976906,
+          "completion_tokens": 123,
+          "prompt_tokens": 36,
+          "decode_tok_s": 12.299261819762423,
+          "chars": 578,
+          "finish_elapsed_s": 11.264804337988608,
+          "text": "A refrigerator works by moving heat from inside to outside, like carrying warmth away in a bucket. A special liquid called refrigerant flows through pipes. First, it evaporates inside the fridge, soaking up heat from your food and air. That turns it into a gas. Then a compressor squeezes the gas, making it hot. Next, the hot gas flows through coils behind or under the fridge, where it releases heat into your kitchen and turns back into a liquid. Finally, it cycles back inside to absorb more heat. So the fridge doesn't \"make cold\"—it removes heat, keeping your food chilly.",
+          "raw_file": "raw-spark4-hybrid/ba4c30f1b61f4ba7a15f5e35fa479879.json",
+          "output_check": true
+        }
+      ]
+    },
+    {
+      "c": 8,
+      "category": "ceiling_count",
+      "wall_s": 6.729,
+      "tokens": 1912,
+      "agg_tok_s": 284.16,
+      "per_stream_tok_s": 41.88,
+      "ttft_mean_s": 0.883,
+      "requests": [
+        {
+          "ttft_s": 0.9040086420136504,
+          "total_s": 6.724644120025914,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 40.88933093549225,
+          "chars": 309,
+          "finish_elapsed_s": 6.7245978899882175,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/76dc77a357f2494ea62a13e91c1602c8.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8614847959834151,
+          "total_s": 6.723960845964029,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 40.59749911753341,
+          "chars": 309,
+          "finish_elapsed_s": 6.723914875998162,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/0a69227fa61140bdb3e5d4f3f6ae8053.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8621204699738882,
+          "total_s": 6.513779527973384,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 42.111801472413624,
+          "chars": 309,
+          "finish_elapsed_s": 6.513742857961915,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/ced8c5d48530488ea884995ee35d4aa9.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9033711479860358,
+          "total_s": 6.513990060018841,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 42.421055922080235,
+          "chars": 309,
+          "finish_elapsed_s": 6.51379254902713,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/ce3c24b114974d5ab61b3131be62df63.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9033169169561006,
+          "total_s": 6.515452129009645,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 42.414170026344905,
+          "chars": 309,
+          "finish_elapsed_s": 6.514649163989816,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/e32dc1629d1a4efa853041d5bd36181b.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8612089939997531,
+          "total_s": 6.516193375049625,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 42.09148197849407,
+          "chars": 309,
+          "finish_elapsed_s": 6.515559680003207,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/87c2f4d01da24167aa1b7df5f15c0d72.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.8615140360197984,
+          "total_s": 6.515400379023049,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 42.103126337952,
+          "chars": 309,
+          "finish_elapsed_s": 6.514300911978353,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/2a34a4f1efd5411681234f06d34b462b.json",
+          "output_check": true
+        },
+        {
+          "ttft_s": 0.9044222759548575,
+          "total_s": 6.517716544971336,
+          "completion_tokens": 239,
+          "prompt_tokens": 30,
+          "decode_tok_s": 42.40727609702749,
+          "chars": 309,
+          "finish_elapsed_s": 6.516666727955453,
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80",
+          "raw_file": "raw-spark4-hybrid/d6dad99621404bc8bede7477580f8a11.json",
+          "output_check": true
+        }
+      ]
+    }
+  ],
+  "prefill": [
+    {
+      "target": 2000,
+      "prompt_tokens": 2950,
+      "ttft_s": 11.502,
+      "prefill_tok_s": 256.5,
+      "raw_file": "raw-spark4-hybrid/5c7970c6580c4b74817ce27c15322724.json",
+      "metric_note": "Effective prompt tokens / client TTFT; includes scheduler, network and first-token overhead."
+    },
+    {
+      "target": 4000,
+      "prompt_tokens": 5853,
+      "ttft_s": 23.141,
+      "prefill_tok_s": 252.9,
+      "raw_file": "raw-spark4-hybrid/183f265395c64568a7472c785c79304a.json",
+      "metric_note": "Effective prompt tokens / client TTFT; includes scheduler, network and first-token overhead."
+    }
+  ],
+  "prefill_shape_warmups": [
+    {
+      "ttft_s": 11.864944772969466,
+      "total_s": 11.865020903002005,
+      "completion_tokens": 1,
+      "prompt_tokens": 2917,
+      "decode_tok_s": null,
+      "chars": 2,
+      "finish_elapsed_s": 11.864959473023191,
+      "text": "OK",
+      "raw_file": "raw-spark4-hybrid/dcea4b98aad34b3bb179c5a0595f7c0b.json"
+    },
+    {
+      "ttft_s": 22.84203748201253,
+      "total_s": 22.842105043004267,
+      "completion_tokens": 1,
+      "prompt_tokens": 5868,
+      "decode_tok_s": null,
+      "chars": 2,
+      "finish_elapsed_s": 22.842052632011473,
+      "text": "OK",
+      "raw_file": "raw-spark4-hybrid/c956993925ef4dfa80e756ed009485a5.json"
+    }
+  ],
+  "finished": "2026-09-10T19:06:35Z",
+  "status": "completed",
+  "valid_for_performance_comparison": true,
+  "headline": [
+    {
+      "level": "C1",
+      "agg_tok_s": 37.19,
+      "per_stream_tok_s": 39.87,
+      "ttft_mean_s": 0.293
+    },
+    {
+      "level": "C2",
+      "agg_tok_s": 60.14,
+      "per_stream_tok_s": 33.8,
+      "ttft_mean_s": 0.481
+    },
+    {
+      "level": "C3",
+      "agg_tok_s": 73.16,
+      "per_stream_tok_s": 29.8,
+      "ttft_mean_s": 0.796
+    },
+    {
+      "level": "C4",
+      "agg_tok_s": 96.63,
+      "per_stream_tok_s": 28.99,
+      "ttft_mean_s": 0.717
+    },
+    {
+      "level": "C5",
+      "agg_tok_s": 105.03,
+      "per_stream_tok_s": 25.45,
+      "ttft_mean_s": 0.891
+    },
+    {
+      "level": "C6",
+      "agg_tok_s": 128.68,
+      "per_stream_tok_s": 25.62,
+      "ttft_mean_s": 0.952
+    },
+    {
+      "level": "C7",
+      "agg_tok_s": 134.36,
+      "per_stream_tok_s": 23.28,
+      "ttft_mean_s": 1.117
+    },
+    {
+      "level": "C8",
+      "agg_tok_s": 147.84,
+      "per_stream_tok_s": 21.98,
+      "ttft_mean_s": 1.14
+    }
+  ]
+}

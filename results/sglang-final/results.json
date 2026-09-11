@@ -1,0 +1,295 @@
+{
+  "as_of": "2026-09-11 03:26",
+  "conclusion": "4/8机SGLang混合注意力方案均完成基础正确性、随机检索与C1–C8测试。C1三次中位decode：4机计数71.04、代码57.92、正文27.37 TPS；8机78.32、67.03、28.58 TPS，提升约4%–16%。8机有效prefill为4机的1.63–1.76倍，C8总吞吐仅约−4%至+4%。单流优先时4机已具备较好的资源效率；8机提供有限的decode增益。",
+  "measurements": [
+    {
+      "label": "4机A 计数",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 18,
+      "output_tokens": 239,
+      "ttft_s": 0.28202177095226943,
+      "decode_tps": 11.725072969209334,
+      "status": "正常结束",
+      "source": "experiments/spark-dsv41-20260910/recovery/bench/20260911-014732-spark4-eager-a/ceiling_count-0.json"
+    },
+    {
+      "label": "4机A 代码",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 36,
+      "output_tokens": 200,
+      "ttft_s": 0.609945290023461,
+      "decode_tps": 11.601368468805854,
+      "status": "正常输出；代码到长度上限",
+      "source": "experiments/spark-dsv41-20260910/recovery/bench/20260911-014732-spark4-eager-a/coding-0.json"
+    },
+    {
+      "label": "4机A 正文",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 25,
+      "output_tokens": 129,
+      "ttft_s": 0.46856577799189836,
+      "decode_tps": 10.982549343675016,
+      "status": "正常结束",
+      "source": "experiments/spark-dsv41-20260910/recovery/bench/20260911-014732-spark4-eager-a/prose-0.json"
+    },
+    {
+      "label": "4机B 计数",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 18,
+      "output_tokens": 239,
+      "ttft_s": 0.2846299689845182,
+      "decode_tps": 13.989238673648673,
+      "status": "正常结束",
+      "source": "experiments/spark-dsv41-20260910/recovery/bench/20260911-014733-spark4-eager-b/ceiling_count-0.json"
+    },
+    {
+      "label": "4机B 代码",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 36,
+      "output_tokens": 200,
+      "ttft_s": 0.6566199149820022,
+      "decode_tps": 11.757938389751317,
+      "status": "正常输出；代码到长度上限",
+      "source": "experiments/spark-dsv41-20260910/recovery/bench/20260911-014733-spark4-eager-b/coding-0.json"
+    },
+    {
+      "label": "4机B 正文",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 25,
+      "output_tokens": 129,
+      "ttft_s": 0.47418904601363465,
+      "decode_tps": 11.432214919346206,
+      "status": "正常结束",
+      "source": "experiments/spark-dsv41-20260910/recovery/bench/20260911-014733-spark4-eager-b/prose-0.json"
+    },
+    {
+      "label": "4机T 计数",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 18,
+      "output_tokens": 239,
+      "ttft_s": 0.3216313874872867,
+      "decode_tps": 45.43409335558965,
+      "status": "全Triton；2次中位；基础检查通过",
+      "source": [
+        "historical-workspace/bench/20260911-024212-spark4-triton-dspark-graph/ceiling_count-0.json",
+        "historical-workspace/bench/20260911-024212-spark4-triton-dspark-graph/ceiling_count-1.json"
+      ]
+    },
+    {
+      "label": "4机T 代码",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 36,
+      "output_tokens": 200,
+      "ttft_s": 0.5707122209714726,
+      "decode_tps": 36.10344933233025,
+      "status": "全Triton；2次中位；基础检查通过",
+      "source": [
+        "historical-workspace/bench/20260911-024212-spark4-triton-dspark-graph/coding-0.json",
+        "historical-workspace/bench/20260911-024212-spark4-triton-dspark-graph/coding-1.json"
+      ]
+    },
+    {
+      "label": "4机T 正文",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 25,
+      "output_tokens": 134,
+      "ttft_s": 0.45115069550229236,
+      "decode_tps": 17.37102726528893,
+      "status": "全Triton；2次中位；基础检查通过",
+      "source": [
+        "historical-workspace/bench/20260911-024212-spark4-triton-dspark-graph/prose-0.json",
+        "historical-workspace/bench/20260911-024212-spark4-triton-dspark-graph/prose-1.json"
+      ]
+    },
+    {
+      "label": "4机混合 计数",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 18,
+      "output_tokens": 239,
+      "ttft_s": 0.194625411008019,
+      "decode_tps": 71.03580313101541,
+      "status": "3次中位；基础检查/随机检索/C1–C8通过",
+      "source": [
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/ceiling_count-0.json",
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/ceiling_count-1.json",
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/ceiling_count-2.json"
+      ]
+    },
+    {
+      "label": "4机混合 代码",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 36,
+      "output_tokens": 200,
+      "ttft_s": 0.25062472000718117,
+      "decode_tps": 57.918937897218164,
+      "status": "3次中位；基础检查/随机检索/C1–C8通过",
+      "source": [
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/coding-0.json",
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/coding-1.json",
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/coding-2.json"
+      ]
+    },
+    {
+      "label": "4机混合 科普正文",
+      "parallel": "TP4/EP4/PP1",
+      "valid": true,
+      "input_tokens": 25,
+      "output_tokens": 127,
+      "ttft_s": 0.2220649659866467,
+      "decode_tps": 27.371049509384846,
+      "status": "3次中位；基础检查/随机检索/C1–C8通过",
+      "source": [
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/prose-0.json",
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/prose-1.json",
+        "historical-workspace/bench/20260911-030201-spark4-hybrid/prose-2.json"
+      ]
+    },
+    {
+      "label": "8机混合 计数",
+      "parallel": "TP8/EP8/PP1",
+      "valid": true,
+      "input_tokens": 18,
+      "output_tokens": 239,
+      "ttft_s": 0.1509164670133032,
+      "decode_tps": 78.32143091554427,
+      "status": "3次中位；基础检查/随机检索/C1–C8通过",
+      "source": [
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/ceiling_count-0.json",
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/ceiling_count-1.json",
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/ceiling_count-2.json"
+      ]
+    },
+    {
+      "label": "8机混合 代码",
+      "parallel": "TP8/EP8/PP1",
+      "valid": true,
+      "input_tokens": 36,
+      "output_tokens": 200,
+      "ttft_s": 0.21306098601780832,
+      "decode_tps": 67.02692281454445,
+      "status": "3次中位；基础检查/随机检索/C1–C8通过",
+      "source": [
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/coding-0.json",
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/coding-1.json",
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/coding-2.json"
+      ]
+    },
+    {
+      "label": "8机混合 科普正文",
+      "parallel": "TP8/EP8/PP1",
+      "valid": true,
+      "input_tokens": 25,
+      "output_tokens": 128,
+      "ttft_s": 0.1712672240100801,
+      "decode_tps": 28.580563318341767,
+      "status": "3次中位；基础检查/随机检索/C1–C8通过",
+      "source": [
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/prose-0.json",
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/prose-1.json",
+        "historical-workspace/bench/20260911-031802-spark8-hybrid/prose-2.json"
+      ]
+    }
+  ],
+  "history_rows": [
+    [
+      "4机 A",
+      "顺序复制；视图 clone",
+      "rank0 778.38 s",
+      "10.98–11.73",
+      "正确生成；计数/代码/正文已测"
+    ],
+    [
+      "4机 B",
+      "顺序复制；全部 CPU 专家权重 clone",
+      "rank0 575.50 s",
+      "11.43–13.99",
+      "正确生成；计数/代码/正文已测"
+    ],
+    [
+      "4机 B 优化",
+      "本地 Engram；DSpark5；decode full graphs",
+      "主601.06s；draft148.41s",
+      "计数最高72.72（限定提示）",
+      "完整任务集出现无关输出，停止矩阵；性能待正确性验收"
+    ],
+    [
+      "4机 T",
+      "本地Engram；DSpark5；graphs；全Triton MLA",
+      "主575.52s",
+      "计数44.37–46.50；代码35.66–36.55",
+      "9类基础检查通过；输出长度条件分别记录"
+    ],
+    [
+      "4机混合",
+      "本地Engram；DSpark5；graphs；Triton prefill / FlashInfer decode",
+      "主577.62s；draft153.87s",
+      "计数71.04；代码57.92；正文27.37（中位）",
+      "基础任务、随机检索、C1–C8内容检查通过"
+    ],
+    [
+      "8机混合",
+      "本地Engram；DSpark5；graphs；Triton prefill / FlashInfer decode",
+      "主250.93–337.94s；draft7.78–72.24s",
+      "计数78.32；代码67.03；正文28.58（中位）",
+      "基础检查/随机检索/C1–C8全部通过"
+    ]
+  ],
+  "config_rows": [
+    [
+      "并行",
+      "4机TP4/EP4/PP1；8机TP8/EP8/PP1"
+    ],
+    [
+      "上下文/KV",
+      "均8192；chunked prefill1024"
+    ],
+    [
+      "优化配置",
+      "max-running-requests8；DSpark block5；decode full graphs BS1–8；prefill graph关闭"
+    ],
+    [
+      "注意力",
+      "Triton prefill / FlashInfer decode；MoE flashinfer_mxfp4"
+    ],
+    [
+      "Engram",
+      "优化4/8机使用已验证本地稀疏副本；早期eager使用BeeGFS"
+    ],
+    [
+      "加载",
+      "单文件线程、顺序GPU复制、所有CPU专家权重clone"
+    ],
+    [
+      "内存",
+      "mem fraction .85；Engram cache全TP合计8GiB；host cgroup100GiB不覆盖全部GPU分配"
+    ],
+    [
+      "历史eager",
+      "并发上限1、关闭DSpark及graphs，配置随原始启动日志保存"
+    ]
+  ],
+  "correctness_notes": [
+    "4/8机混合各通过18项基础/长度检查、3项独立记录码检索、108条矩阵请求基本检查。自动检查不等于完整质量评测。",
+    "原全FlashInfer优化版存在无关输出；eager无标签摘要也失败。相关性能只作诊断，原始数据完整保留。"
+  ],
+  "jitter": {
+    "config": "8机混合",
+    "protocol": "6次连续计数，NVML采样，无其它GPU计算",
+    "minimum_tps": 69.64253690191809,
+    "median_tps": 85.40481044316024,
+    "maximum_tps": 86.15147264620572,
+    "same_count_output": true,
+    "note": "独立诊断，不能替换三任务交错复测的中位数。"
+  }
+}

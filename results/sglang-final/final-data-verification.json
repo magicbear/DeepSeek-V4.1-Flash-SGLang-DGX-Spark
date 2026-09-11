@@ -1,0 +1,20 @@
+{
+  "4": {
+    "matrix_cells": 24,
+    "requests": 108,
+    "c1_repeat_samples": 9,
+    "correctness_checks": 18,
+    "retrieval_checks": 3,
+    "prefill_points": 2,
+    "passed": true
+  },
+  "8": {
+    "matrix_cells": 24,
+    "requests": 108,
+    "c1_repeat_samples": 9,
+    "correctness_checks": 18,
+    "retrieval_checks": 3,
+    "prefill_points": 2,
+    "passed": true
+  }
+}

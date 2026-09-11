@@ -1,0 +1,931 @@
+{
+  "request": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[bench v1 run coding c4 s0] Write a Python function merge_intervals(intervals) that merges overlapping intervals and returns them sorted. Include a one-line docstring and two example calls."
+      }
+    ],
+    "max_tokens": 200,
+    "temperature": 0,
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    },
+    "chat_template_kwargs": {
+      "thinking": false
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 0.7734109120210633,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 0.7734319120063446,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "```"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 0.8684681330341846,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "python\ndef merge_intervals"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 0.9695424049859866,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "(intervals):\n    \"\"\""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.0667555590043776,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "Merge overlapping intervals and"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.1638427930301987,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " return them"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.2629422410391271,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " sorted by start.\"\"\"\n    if"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.3680401199962944,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064355,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " not intervals:\n        return []\n"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.4732110680197366,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "    intervals"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.5837445229990408,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " = sorted(intervals,"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.699268082040362,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " key=lambda x: x["
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.8099387279944494,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "0])\n    merged = ["
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 1.9306506619905122,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "list(intervals[0"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.0547653079847805,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "])]\n    for start,"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.179010885010939,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " end in intervals[1:"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.3038734670262784,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064356,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "]:\n        if start <= merged"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.434972340997774,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "[-1][1]:\n           "
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.5607118780026212,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " merged[-1][1]"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.6832555240252987,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " = max(merged[-1"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.8128061260213144,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "][1], end)\n       "
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 2.9460763949900866,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " else:\n            merged.append(["
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.073543353995774,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "start, end])\n    return"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.201733977999538,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " [tuple(m"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.324995769013185,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064357,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ") for m in merged]\n\n\n"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.4724099219893105,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "print(merge_intervals(["
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.6025629300274886,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "(1, 3),"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.723757766012568,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " (2, 6"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.838218146993313,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "), (8"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 3.949808069039136,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ", 10), (15"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.05896194500383,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ", 18"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.187756942992564,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ")]))  # [(1"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.328752022993285,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064358,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ", 6"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.459849447011948,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "), (8, 10"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.594151851022616,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "), (15, 18"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.737937821017113,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ")]\nprint(merge_intervals"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.863407546014059,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "([(1, 4"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 4.986309194995556,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "), (4"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.105788240034599,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ", 5)]"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.26587326801382,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "))                     "
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.418703289004043,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064359,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": " # [(1, 5"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.559767380007543,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064360,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": ")]\n```"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.5597878900007345,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064360,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "matched_stop": 1
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 5.5598011200199835,
+      "data": {
+        "id": "c34f6e12b791498a850bf65237178e83",
+        "object": "chat.completion.chunk",
+        "created": 1789064360,
+        "model": "deepseek-v4.1-flash",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 47,
+          "total_tokens": 247,
+          "completion_tokens": 200,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  ],
+  "result": {
+    "ttft_s": 0.7734319120063446,
+    "total_s": 5.559895090002101,
+    "completion_tokens": 200,
+    "prompt_tokens": 47,
+    "decode_tok_s": 41.57651476716662,
+    "chars": 626,
+    "finish_elapsed_s": 5.5597878900007345,
+    "text": "```python\ndef merge_intervals(intervals):\n    \"\"\"Merge overlapping intervals and return them sorted by start.\"\"\"\n    if not intervals:\n        return []\n    intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [list(intervals[0])]\n    for start, end in intervals[1:]:\n        if start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start, end])\n    return [tuple(m) for m in merged]\n\n\nprint(merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]))  # [(1, 6), (8, 10), (15, 18)]\nprint(merge_intervals([(1, 4), (4, 5)]))                      # [(1, 5)]\n```"
+  }
+}

@@ -1,0 +1,533 @@
+{
+  "benchmark_source": "historical-workspace/bench/20260911-032222-spark8-hybrid-jitter",
+  "measurements": [
+    {
+      "repeat": 0,
+      "decode_tps": 69.64253690191809,
+      "count_correct": true,
+      "ttft_s": 0.16013819898944348,
+      "hosts": {
+        "98": {
+          "sm_mhz": 2398.0,
+          "power_w": 26.92,
+          "utilization": 93.0,
+          "temp_c": 63.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        },
+        "99": {
+          "sm_mhz": 2405.0,
+          "power_w": 26.89,
+          "utilization": 93.0,
+          "temp_c": 68.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        },
+        "100": {
+          "sm_mhz": 2405.0,
+          "power_w": 26.42,
+          "utilization": 92.0,
+          "temp_c": 66.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        },
+        "101": {
+          "sm_mhz": 2411.0,
+          "power_w": 25.86,
+          "utilization": 92.0,
+          "temp_c": 64.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        },
+        "102": {
+          "sm_mhz": 2411.0,
+          "power_w": 25.36,
+          "utilization": 94.0,
+          "temp_c": 60.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        },
+        "103": {
+          "sm_mhz": 2398.0,
+          "power_w": 26.3,
+          "utilization": 94.0,
+          "temp_c": 60.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        },
+        "104": {
+          "sm_mhz": 2405.0,
+          "power_w": 26.04,
+          "utilization": 94.0,
+          "temp_c": 61.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        },
+        "105": {
+          "sm_mhz": 2398.0,
+          "power_w": 28.15,
+          "utilization": 93.0,
+          "temp_c": 62.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 17
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "decode_tps": 86.15147264620572,
+      "count_correct": true,
+      "ttft_s": 0.1687753470032476,
+      "hosts": {
+        "98": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.775,
+          "utilization": 94.5,
+          "temp_c": 65.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "99": {
+          "sm_mhz": 2405.0,
+          "power_w": 30.6,
+          "utilization": 93.0,
+          "temp_c": 69.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "100": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.314999999999998,
+          "utilization": 94.0,
+          "temp_c": 68.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "101": {
+          "sm_mhz": 2411.0,
+          "power_w": 29.29,
+          "utilization": 94.0,
+          "temp_c": 65.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 13
+        },
+        "102": {
+          "sm_mhz": 2405.0,
+          "power_w": 29.43,
+          "utilization": 93.0,
+          "temp_c": 62.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "103": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.575,
+          "utilization": 93.0,
+          "temp_c": 61.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "104": {
+          "sm_mhz": 2411.0,
+          "power_w": 30.365000000000002,
+          "utilization": 94.0,
+          "temp_c": 63.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "105": {
+          "sm_mhz": 2392.0,
+          "power_w": 31.9,
+          "utilization": 94.0,
+          "temp_c": 64.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "decode_tps": 85.3424247450029,
+      "count_correct": true,
+      "ttft_s": 0.15229602600447834,
+      "hosts": {
+        "98": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.96,
+          "utilization": 94.0,
+          "temp_c": 65.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "99": {
+          "sm_mhz": 2405.0,
+          "power_w": 30.63,
+          "utilization": 93.0,
+          "temp_c": 69.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "100": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.445,
+          "utilization": 93.0,
+          "temp_c": 68.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "101": {
+          "sm_mhz": 2411.0,
+          "power_w": 29.43,
+          "utilization": 94.0,
+          "temp_c": 66.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "102": {
+          "sm_mhz": 2405.0,
+          "power_w": 29.52,
+          "utilization": 93.0,
+          "temp_c": 62.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "103": {
+          "sm_mhz": 2398.0,
+          "power_w": 31.225,
+          "utilization": 94.0,
+          "temp_c": 61.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "104": {
+          "sm_mhz": 2411.0,
+          "power_w": 30.564999999999998,
+          "utilization": 93.0,
+          "temp_c": 63.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "105": {
+          "sm_mhz": 2392.0,
+          "power_w": 32.03,
+          "utilization": 94.0,
+          "temp_c": 64.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        }
+      }
+    },
+    {
+      "repeat": 3,
+      "decode_tps": 85.9927863193342,
+      "count_correct": true,
+      "ttft_s": 0.1548884930089116,
+      "hosts": {
+        "98": {
+          "sm_mhz": 2398.0,
+          "power_w": 31.04,
+          "utilization": 93.0,
+          "temp_c": 65.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 13
+        },
+        "99": {
+          "sm_mhz": 2405.0,
+          "power_w": 30.77,
+          "utilization": 92.0,
+          "temp_c": 70.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "100": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.54,
+          "utilization": 94.0,
+          "temp_c": 68.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "101": {
+          "sm_mhz": 2411.0,
+          "power_w": 29.465,
+          "utilization": 93.0,
+          "temp_c": 66.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "102": {
+          "sm_mhz": 2405.0,
+          "power_w": 29.65,
+          "utilization": 94.0,
+          "temp_c": 62.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 13
+        },
+        "103": {
+          "sm_mhz": 2398.0,
+          "power_w": 31.05,
+          "utilization": 94.0,
+          "temp_c": 61.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 13
+        },
+        "104": {
+          "sm_mhz": 2411.0,
+          "power_w": 30.59,
+          "utilization": 94.0,
+          "temp_c": 63.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "105": {
+          "sm_mhz": 2392.0,
+          "power_w": 32.07,
+          "utilization": 94.0,
+          "temp_c": 65.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        }
+      }
+    },
+    {
+      "repeat": 4,
+      "decode_tps": 84.79659855134697,
+      "count_correct": true,
+      "ttft_s": 0.1523009660304524,
+      "hosts": {
+        "98": {
+          "sm_mhz": 2398.0,
+          "power_w": 31.09,
+          "utilization": 93.5,
+          "temp_c": 65.5,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "99": {
+          "sm_mhz": 2405.0,
+          "power_w": 30.79,
+          "utilization": 93.0,
+          "temp_c": 70.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "100": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.58,
+          "utilization": 93.5,
+          "temp_c": 69.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "101": {
+          "sm_mhz": 2411.0,
+          "power_w": 29.62,
+          "utilization": 93.5,
+          "temp_c": 66.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "102": {
+          "sm_mhz": 2398.0,
+          "power_w": 29.985,
+          "utilization": 94.0,
+          "temp_c": 63.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "103": {
+          "sm_mhz": 2398.0,
+          "power_w": 31.3,
+          "utilization": 93.0,
+          "temp_c": 62.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "104": {
+          "sm_mhz": 2411.0,
+          "power_w": 30.54,
+          "utilization": 93.0,
+          "temp_c": 64.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "105": {
+          "sm_mhz": 2392.0,
+          "power_w": 32.16,
+          "utilization": 94.0,
+          "temp_c": 65.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        }
+      }
+    },
+    {
+      "repeat": 5,
+      "decode_tps": 85.46719614131757,
+      "count_correct": true,
+      "ttft_s": 0.15424410998821259,
+      "hosts": {
+        "98": {
+          "sm_mhz": 2398.0,
+          "power_w": 31.11,
+          "utilization": 94.0,
+          "temp_c": 66.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "99": {
+          "sm_mhz": 2405.0,
+          "power_w": 30.95,
+          "utilization": 92.0,
+          "temp_c": 70.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "100": {
+          "sm_mhz": 2398.0,
+          "power_w": 30.73,
+          "utilization": 93.0,
+          "temp_c": 69.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "101": {
+          "sm_mhz": 2411.0,
+          "power_w": 29.66,
+          "utilization": 94.0,
+          "temp_c": 66.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "102": {
+          "sm_mhz": 2398.0,
+          "power_w": 29.925,
+          "utilization": 94.0,
+          "temp_c": 63.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "103": {
+          "sm_mhz": 2398.0,
+          "power_w": 31.26,
+          "utilization": 94.0,
+          "temp_c": 62.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "104": {
+          "sm_mhz": 2411.0,
+          "power_w": 30.58,
+          "utilization": 94.0,
+          "temp_c": 64.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        },
+        "105": {
+          "sm_mhz": 2392.0,
+          "power_w": 32.2,
+          "utilization": 94.0,
+          "temp_c": 65.0,
+          "throttle_flags": [
+            0
+          ],
+          "samples": 14
+        }
+      }
+    }
+  ]
+}

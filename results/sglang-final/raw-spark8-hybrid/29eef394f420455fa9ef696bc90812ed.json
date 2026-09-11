@@ -1,0 +1,112 @@
+{
+  "request": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[bench v1 prefill 2000] orchid50 yarrow485 yarrow854 zephyr780 iris721 zephyr185 sierra652 ember798 yarrow409 garnet840 umber149 raven673 tundra730 kestrel352 quartz433 amber211 xenon814 amber618 umber607 willow453 garnet980 cedar721 basin970 harbor748 pylon711 delta596 xenon224 quartz125 juniper464 nimbus54 kestrel524 fjord201 meadow479 tundra913 basin841 basin289 delta658 juniper809 sierra615 amber119 basin110 delta527 nimbus226 garnet201 raven12 amber126 ember660 ember316 harbor565 zephyr634 cedar918 zephyr552 sierra515 raven656 ember806 harbor618 amber452 kestrel50 kestrel849 amber155 meadow292 orchid550 nimbus909 xenon825 zephyr410 ember647 garnet38 harbor849 amber706 pylon177 raven732 tundra377 lumen207 tundra720 nimbus494 ember284 yarrow679 ember20 tundra217 sierra765 yarrow320 umber526 meadow170 willow422 lumen313 meadow585 fjord167 harbor49 garnet425 raven608 juniper805 basin859 pylon647 delta813 cedar204 umber326 willow388 juniper662 nimbus431 basin222 ember358 yarrow353 garnet619 quartz552 orchid239 meadow837 delta909 garnet579 xenon761 ember934 tundra418 yarrow7 cedar397 kestrel135 quartz0 delta672 raven61 cedar558 umber560 xenon915 willow73 amber999 harbor969 xenon667 yarrow477 juniper452 pylon115 cedar240 amber558 garnet734 zephyr490 nimbus528 vessel838 orchid862 willow962 delta995 basin84 basin90 orchid828 lumen424 tundra677 kestrel733 delta510 raven65 juniper773 juniper542 cedar666 nimbus304 pylon487 zephyr66 quartz609 amber573 cedar109 kestrel200 iris215 sierra614 harbor839 willow372 amber325 basin727 quartz158 vessel903 lumen333 harbor351 raven335 quartz999 meadow144 umber438 kestrel874 harbor744 yarrow346 delta863 meadow957 tundra600 kestrel563 vessel976 sierra466 vessel89 ember173 ember670 fjord297 garnet3 amber222 meadow303 tundra556 iris397 nimbus824 umber237 pylon703 orchid168 fjord865 ember186 amber678 lumen730 yarrow556 harbor759 fjord925 iris242 iris364 willow383 kestrel898 iris512 willow447 amber517 fjord156 willow156 garnet190 vessel789 iris289 zephyr819 ember109 yarrow744 tundra668 pylon403 vessel332 meadow869 vessel657 nimbus153 vessel777 tundra191 raven370 kestrel188 tundra371 harbor276 raven338 basin2 umber430 lumen818 cedar146 yarrow543 tundra354 amber840 delta100 orchid504 fjord182 fjord512 kestrel74 basin260 basin29 tundra786 xenon801 lumen987 ember377 raven982 sierra96 tundra194 xenon468 yarrow496 raven846 umber332 raven280 pylon29 juniper368 vessel325 vessel353 quartz647 amber152 nimbus126 raven320 quartz898 nimbus502 ember312 meadow564 meadow848 sierra32 vessel416 ember254 quartz381 pylon224 orchid749 fjord295 orchid937 amber497 quartz620 raven709 xenon431 zephyr937 fjord517 meadow537 lumen199 meadow929 garnet667 vessel221 pylon216 nimbus739 fjord788 sierra768 ember199 delta896 orchid632 basin770 nimbus615 juniper419 yarrow658 pylon825 umber358 willow999 garnet902 quartz292 meadow863 zephyr625 meadow38 umber504 nimbus182 quartz617 iris70 lumen579 ember27 kestrel683 orchid109 orchid215 yarrow574 fjord549 nimbus149 nimbus687 lumen108 lumen52 fjord425 pylon135 nimbus869 garnet837 quartz271 iris920 juniper438 garnet708 garnet63 meadow824 orchid665 harbor156 juniper488 umber192 zephyr748 basin480 umber627 fjord641 sierra9 amber212 garnet716 ember755 cedar670 vessel270 iris660 delta734 garnet801 lumen194 cedar8 iris870 quartz113 zephyr71 cedar340 xenon8 yarrow877 garnet607 garnet443 vessel769 amber246 basin954 basin83 ember914 tundra110 umber186 lumen480 raven967 garnet784 juniper572 umber546 nimbus149 orchid19 meadow815 delta452 xenon428 iris451 fjord575 sierra846 orchid262 raven808 kestrel375 pylon938 iris728 vessel161 amber820 pylon186 vessel475 iris881 amber136 vessel608 willow389 fjord885 nimbus749 willow273 basin589 umber712 nimbus73 vessel629 zephyr940 garnet405 orchid339 vessel440 orchid971 nimbus490 harbor819 juniper956 harbor572 delta921 garnet711 tundra375 meadow904 quartz445 meadow73 yarrow63 vessel116 lumen319 sierra375 sierra767 delta737 iris105 xenon411 nimbus373 ember893 raven731 iris732 cedar877 harbor243 xenon809 orchid140 harbor62 amber647 pylon144 sierra170 basin172 kestrel503 tundra877 amber91 ember725 willow398 fjord343 cedar490 ember37 ember300 vessel863 ember265 juniper95 orchid376 sierra394 iris209 harbor79 delta635 yarrow625 fjord508 garnet143 raven431 juniper762 raven428 iris839 amber750 sierra593 cedar171 willow967 basin258 harbor464 garnet999 cedar75 kestrel997 nimbus640 iris516 ember209 willow303 raven106 lumen273 iris222 meadow549 ember848 vessel809 iris508 kestrel869 garnet391 orchid251 pylon16 juniper651 lumen430 tundra738 raven76 yarrow768 willow957 xenon131 raven944 vessel873 raven101 vessel880 garnet715 tundra521 yarrow613 cedar8 quartz340 quartz516 juniper583 lumen923 cedar452 iris161 fjord103 kestrel14 sierra47 nimbus418 amber271 xenon668 iris645 umber508 meadow17 ember528 pylon29 amber544 xenon582 umber923 orchid867 amber271 harbor377 yarrow166 fjord964 umber229 juniper370 umber572 fjord191 raven235 juniper665 tundra748 amber16 orchid211 sierra142 yarrow212 ember67 orchid205 xenon460 delta754 harbor950 yarrow562 sierra380 cedar758 xenon934 tundra975 xenon57 willow306 cedar907 willow180 ember957 sierra638 raven490 tundra93 pylon82 lumen159 lumen357 fjord938 iris398 raven882 lumen262 pylon943 lumen800 sierra821 sierra423 umber530 raven124 harbor606 fjord321 umber936 zephyr471 pylon167 fjord509 ember699 nimbus54 willow635 quartz969 iris382 meadow241 delta397 juniper149 sierra919 zephyr941 orchid277 amber45 juniper846 fjord261 meadow576 basin27 juniper548 quartz84 lumen189 quartz146 tundra298 lumen437 meadow787 willow945 sierra217 xenon818 nimbus787 vessel558 tundra325 umber691 cedar510 yarrow129 tundra373 ember131 xenon251 kestrel862 delta587 tundra500 ember910 zephyr784 garnet80 sierra125 lumen360 cedar851 orchid377 fjord649 raven529 pylon879 iris222 raven278 xenon936 umber51 lumen184 vessel389 kestrel105 juniper436 umber774 xenon416 delta814 raven163 meadow880 delta781 harbor424 cedar526 yarrow413 delta200 delta758 juniper799 willow216 tundra86 vessel872 lumen892 amber799 umber574 amber587 cedar606 meadow614 delta487 willow510 raven484 quartz848 harbor393 iris745 umber650 yarrow810 zephyr934 xenon897 kestrel29 sierra779 kestrel37 cedar919 xenon105 kestrel254 delta975 juniper318 cedar118 amber718 sierra287 tundra761 lumen483 willow724 juniper225 vessel496 yarrow738 willow717 yarrow694 pylon631 ember260 umber23 juniper824 umber150 iris856 ember521 raven732 tundra427 meadow57 iris690 garnet46 quartz874 raven321 orchid756 lumen541 vessel211 orchid341 garnet614 zephyr55 tundra276 amber607 fjord753 quartz461 iris92 cedar591 nimbus441 ember949 meadow204 raven820 nimbus186 ember636 vessel143 orchid440 harbor248 harbor87 zephyr403 cedar478 kestrel834 zephyr893 pylon561 nimbus664 umber30 basin176 harbor559 xenon940 juniper40 xenon914 lumen553 fjord225 basin582 orchid134 sierra347 umber917 willow79 nimbus74 basin759 yarrow260 raven507 cedar642 basin94 fjord470 amber345 vessel79 nimbus985 nimbus461 lumen582 iris729 delta724 garnet566 yarrow698 pylon751 garnet697 raven575 harbor269 quartz896 kestrel919 iris426 raven934 pylon945 garnet375 pylon130 orchid797 pylon945 quartz406 nimbus863 yarrow228 umber217 amber659 willow781 iris54 amber572 tundra179 xenon207 juniper693 kestrel974 lumen258 delta813 yarrow220 garnet796 meadow436 yarrow942 umber470 sierra753 raven550 sierra783 harbor354 yarrow483 orchid569 delta477 yarrow927 umber535 harbor900 nimbus715 amber616 cedar702 nimbus403 zephyr2 orchid243 tundra364 willow394 harbor132 fjord435 sierra32 xenon494 raven535 iris841 basin139 cedar131 nimbus317 juniper802 pylon182 tundra307 orchid109 orchid913 quartz686 willow982 zephyr755 umber808 tundra261 kestrel826 garnet809 tundra514 umber79 juniper966 iris495 orchid519 kestrel749 kestrel353 raven161 amber314 orchid969 raven800 delta614 harbor139 quartz950 cedar713 yarrow550 amber888 willow198 lumen151 umber813 cedar868 sierra417 meadow950 pylon806 meadow102 ember202 zephyr48 delta161 nimbus947 sierra942 kestrel848 tundra455 ember131 vessel429 sierra85 orchid415 delta817 willow395 lumen328 quartz688 juniper27 lumen448 nimbus789 basin16 iris757 quartz846 willow927 raven288 kestrel203 fjord706 garnet116 iris654 yarrow430 pylon390 yarrow565 sierra603 zephyr851 tundra452 iris698 juniper258 lumen952 zephyr230 garnet122 fjord32 tundra517 garnet44 vessel392 basin958 harbor935 kestrel282 orchid58 raven811 iris809 iris904 nimbus66 garnet584 raven217 ember206 umber885 kestrel988 orchid331 willow336 basin628 juniper939 fjord470 raven28 umber480 harbor549 harbor814 pylon357 basin771 zephyr947 quartz96 willow767 vessel714 umber272 tundra280 fjord904 raven565 quartz726 harbor580 raven116 quartz304 garnet384 raven565 harbor367 delta20 juniper879 ember510 umber250 umber635 meadow957 ember717 orchid457 garnet772 sierra648 tundra390 orchid674 kestrel319 fjord413 umber792 pylon497 garnet775 xenon719 amber459 kestrel350 nimbus998 kestrel542 harbor881 lumen253 harbor576 cedar741 xenon96 quartz634 pylon865 yarrow317 umber623 meadow250 umber582 pylon251 delta315 quartz634 nimbus217 basin838 lumen431 zephyr79 orchid748 willow0 raven8 harbor618 pylon969 pylon172 fjord308 nimbus499 zephyr214 fjord640 vessel650 orchid83 willow295 quartz526 meadow971 orchid966 vessel56 amber20 vessel952 amber403 basin634 cedar861 harbor312 fjord370 umber611 nimbus179 ember655 vessel436 ember442 juniper83 garnet828 basin716 fjord113 basin887 tundra494 kestrel226 raven285 willow54 nimbus138 lumen191 lumen384 orchid236 kestrel992 iris771 yarrow131 quartz494 meadow292 willow506 yarrow395 umber182 fjord89 amber307 lumen780 kestrel766 kestrel986 orchid207 kestrel482 iris740 delta884 pylon630 yarrow290 meadow896 garnet103 basin104 harbor703 meadow392 ember293 vessel765 amber614 harbor302 meadow826 orchid759 sierra633 zephyr502 amber495 yarrow157 orchid526 quartz256 ember115 cedar602 zephyr682 tundra251 juniper442 zephyr256 quartz396 nimbus707 nimbus736 yarrow459 pylon348 vessel408 willow497 sierra64 willow236 juniper881 umber119 orchid320 pylon894 yarrow544 juniper857 iris954 basin48 vessel774 zephyr674 tundra109 iris745 pylon797 iris763 garnet842 basin524 meadow14 xenon925 cedar369 kestrel167 juniper996 pylon555 nimbus603 yarrow859 nimbus730 xenon449 delta577 garnet771 amber698 quartz602 juniper514 yarrow893 vessel753 pylon235 amber201 meadow806 juniper228 quartz87 raven495 quartz566 yarrow993 lumen797 orchid359 garnet528 kestrel845 juniper14 nimbus722\n\nReply with the single word OK."
+      }
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    },
+    "chat_template_kwargs": {
+      "thinking": false
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 7.061748680949677,
+      "data": {
+        "id": "eea655e21316465bb13dca0bf02f9641",
+        "object": "chat.completion.chunk",
+        "created": 1789065423,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.061771181994118,
+      "data": {
+        "id": "eea655e21316465bb13dca0bf02f9641",
+        "object": "chat.completion.chunk",
+        "created": 1789065423,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null,
+              "content": "OK"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.0617861219798215,
+      "data": {
+        "id": "eea655e21316465bb13dca0bf02f9641",
+        "object": "chat.completion.chunk",
+        "created": 1789065423,
+        "model": "deepseek-v4.1-flash",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "reasoning_content": null
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "matched_stop": null
+          }
+        ]
+      }
+    },
+    {
+      "elapsed_s": 7.0617993119522,
+      "data": {
+        "id": "eea655e21316465bb13dca0bf02f9641",
+        "object": "chat.completion.chunk",
+        "created": 1789065423,
+        "model": "deepseek-v4.1-flash",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 2950,
+          "total_tokens": 2951,
+          "completion_tokens": 1,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  ],
+  "result": {
+    "ttft_s": 7.061771181994118,
+    "total_s": 7.061840191949159,
+    "completion_tokens": 1,
+    "prompt_tokens": 2950,
+    "decode_tok_s": null,
+    "chars": 2,
+    "finish_elapsed_s": 7.0617861219798215,
+    "text": "OK"
+  }
+}
